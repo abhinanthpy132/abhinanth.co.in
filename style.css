@@ -1484,3 +1484,26 @@ textarea {
     text-shadow: 0 0 10px rgba(197, 255, 26, 0.6);
   }
 }
+
+/* FOUC Prevention for GSAP Entrance Animations */
+.hero-label-left, 
+.hero-label-right, 
+.hero-heading .word, 
+.hero-bio .bio-col, 
+.hero-portrait, 
+.hero-cta .pill-btn,
+.nav-links a,
+.service-card,
+.project-card,
+.testimonial-card,
+.blog-card,
+.contact-grid h2,
+.contact-form input,
+.contact-form textarea,
+.contact-form button,
+.social-btn,
+.footer-heading,
+.footer-col,
+.footer-email {
+  opacity: 0;
+}

@@ -171,7 +171,20 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   loadGSAP().then(() => {
-    if (!window.gsap) return;
+    if (!window.gsap) {
+      // Fallback: If GSAP fails to load, restore opacity of all elements immediately
+      const style = document.createElement('style');
+      style.textContent = `
+        .hero-label-left, .hero-label-right, .hero-heading .word, .hero-bio .bio-col, .hero-portrait, .hero-cta .pill-btn,
+        .nav-links a, .service-card, .project-card, .testimonial-card, .blog-card,
+        .contact-grid h2, .contact-form input, .contact-form textarea, .contact-form button, .social-btn,
+        .footer-heading, .footer-col, .footer-email {
+          opacity: 1 !important;
+        }
+      `;
+      document.head.appendChild(style);
+      return;
+    }
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -183,25 +196,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Context scoping
     gsap.context(() => {
       // -------------------------------------------------------------
-      // 6.1 FOUC Prevention & Initial States Stylesheet
+      // 6.1 Performance and Layout overrides
       // -------------------------------------------------------------
       const style = document.createElement('style');
       style.textContent = `
-        .hero-label-left, .hero-label-right, .hero-heading .word, .hero-bio .bio-col, .hero-portrait, .hero-cta .pill-btn {
-          opacity: 0;
-        }
-        .nav-links a {
-          opacity: 0;
-        }
-        .service-card, .project-card, .testimonial-card, .blog-card {
-          opacity: 0;
-        }
-        .contact-grid h2, .contact-form input, .contact-form textarea, .contact-form button, .social-btn {
-          opacity: 0;
-        }
-        .footer-heading, .footer-col, .footer-email {
-          opacity: 0;
-        }
         body.is-scrolling * {
           pointer-events: none !important;
         }
