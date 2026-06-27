@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services — Abhinanth PY</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#c5ff1a',
+              secondary: '#00f0ff',
+              accent: '#ff007f',
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== Pac-Man Loader ===== -->
+    <div class="loader-wrapper" id="page-loader">
+      <div class="pacman-container">
+        <div class="pacman"></div>
+        <div class="pacman-dot"></div>
+        <div class="pacman-dot"></div>
+        <div class="pacman-dot"></div>
+      </div>
+      <div class="loader-text">Loading Portfolio...</div>
+    </div>
+
+    <!-- ===== Grain Overlay ===== -->
+    <div class="grain-overlay"></div>
+
+    <!-- ===== Custom Cursor ===== -->
+    <div class="custom-cursor"></div>
+
+    <!-- ===== Top Banner ===== -->
+    <div class="top-banner">
+      <span>Open to Work — Web Dev &amp; Social Media</span>
+      <span>Based in Kerala 🇮🇳 | Available Worldwide</span>
+    </div>
+
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">ABHI</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html" style="background: #00f0ff; color: #08090c; border-color: #ffffff; transform: translate(-2px, -2px); box-shadow: 3px 3px 0px 0px #ffffff;">Services</a>
+          <a href="works.html">Works</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <button class="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== Mobile Menu ===== -->
+    <div class="mobile-menu">
+      <button class="mobile-close" aria-label="Close menu">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mobile-links">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="services.html" class="mobile-link" style="background: #00f0ff; color: #08090c; box-shadow: 6px 6px 0px 0px #ff007f; transform: translate(-3px, -3px);">Services</a>
+        <a href="works.html" class="mobile-link">Works</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+      </div>
+    </div>
+
+    <!-- ===== Section 1: Hero Intro ===== -->
+    <section class="hero min-h-0 py-[100px] border-b-4 border-white" id="services-hero">
+      <div class="absolute top-8 left-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
+      <div class="absolute top-8 right-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
+
+      <div class="container-main w-full">
+        <div class="w-full flex flex-col items-start text-left">
+          <h1 class="uppercase text-white tracking-tight leading-none mb-4 w-full" style="font-family: 'Archivo Black', sans-serif; font-size: clamp(3rem, 10vw, 6rem); border-bottom: 3px solid #c5ff1a; padding-bottom: 20px; display: block;">
+            WHAT I DO.
+          </h1>
+          <p class="font-mono text-primary uppercase text-lg font-bold mt-4">Clean websites. Smart content. Real results.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 2: Services Detail ===== -->
+    <section class="services border-b-4 border-white bg-[#08090c]" id="services-detail">
+      <div class="container-main">
+        <h2 class="section-title">Services</h2>
+        <div class="flex flex-col gap-8 max-w-4xl mx-auto mt-12">
+          
+          <!-- Card 1 -->
+          <div class="service-card w-full min-h-0 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-6 font-mono text-[0.7rem] uppercase text-secondary">
+                <div class="flex gap-1.5">
+                  <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                  <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                  <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+                </div>
+                <span>SRV // 01</span>
+              </div>
+              <h3 class="mb-4">Website Design &amp; Build</h3>
+              <div class="tags mb-6">
+                <span class="tag">HTML / CSS / JS</span>
+                <span class="tag">WordPress</span>
+                <span class="tag">Mobile Responsive</span>
+                <span class="tag">Fast Load</span>
+              </div>
+              <p class="text-white text-opacity-80 text-sm md:text-base leading-relaxed font-sans mt-4">
+                From a single landing page to a full multi-page business website — I design 
+                and build clean, fast, mobile-first websites. Every site is hand-coded or 
+                built on WordPress with SEO foundations already in place. No page builders 
+                that slow you down.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card w-full min-h-0 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-6 font-mono text-[0.7rem] uppercase text-secondary">
+                <div class="flex gap-1.5">
+                  <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                  <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                  <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+                </div>
+                <span>SRV // 02</span>
+              </div>
+              <h3 class="mb-4">Social Media Management</h3>
+              <div class="tags mb-6">
+                <span class="tag">Instagram</span>
+                <span class="tag">Facebook</span>
+                <span class="tag">Content Calendar</span>
+                <span class="tag">DM Automation</span>
+              </div>
+              <p class="text-white text-opacity-80 text-sm md:text-base leading-relaxed font-sans mt-4">
+                I plan, create, and schedule content for businesses that want consistent 
+                social media presence without the stress. I handle caption writing, reel 
+                scripts, story sequences, hashtag strategy, and DM keyword automation 
+                for lead capture.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card w-full min-h-0 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-6 font-mono text-[0.7rem] uppercase text-secondary">
+                <div class="flex gap-1.5">
+                  <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                  <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                  <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+                </div>
+                <span>SRV // 03</span>
+              </div>
+              <h3 class="mb-4">SEO &amp; Performance Optimisation</h3>
+              <div class="tags mb-6">
+                <span class="tag">On-Page SEO</span>
+                <span class="tag">Schema / JSON-LD</span>
+                <span class="tag">Google Analytics</span>
+                <span class="tag">Core Web Vitals</span>
+              </div>
+              <p class="text-white text-opacity-80 text-sm md:text-base leading-relaxed font-sans mt-4">
+                I audit and optimise existing websites for search visibility and performance. 
+                This includes fixing metadata, heading structure, image compression, structured 
+                data, internal linking, and Google Search Console setup — so your site 
+                actually gets found.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-card w-full min-h-0 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-6 font-mono text-[0.7rem] uppercase text-secondary">
+                <div class="flex gap-1.5">
+                  <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                  <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                  <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+                </div>
+                <span>SRV // 04</span>
+              </div>
+              <h3 class="mb-4">Healthcare &amp; Real Estate Niche</h3>
+              <div class="tags mb-6">
+                <span class="tag">Clinic Websites</span>
+                <span class="tag">Property Listings</span>
+                <span class="tag">Appointment Forms</span>
+                <span class="tag">Medical SEO</span>
+              </div>
+              <p class="text-white text-opacity-80 text-sm md:text-base leading-relaxed font-sans mt-4">
+                I specialise in building websites for physiotherapy clinics, hospitals, 
+                real estate developers, and interior studios. With a nursing background, 
+                I understand healthcare audiences — and build sites that convert visitors 
+                into actual patients and buyers.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 3: Process ===== -->
+    <section class="services border-b-4 border-white bg-[#08090c]" id="process">
+      <div class="container-main">
+        <h2 class="section-title">How It Works</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
+          
+          <!-- Step 1 -->
+          <div class="service-card min-h-0 flex flex-col justify-start">
+            <div class="font-['Archivo_Black'] text-primary text-[4rem] font-black leading-none mb-3" style="font-family: 'Archivo Black', sans-serif;">01 / DISCOVER</div>
+            <p class="text-white text-opacity-80 text-sm md:text-base leading-relaxed font-sans mt-2">
+              We start with a call or WhatsApp chat. You tell me about your business, 
+              goals, and target audience. I ask the right questions to understand what 
+              you actually need — not just what you think you need.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="service-card min-h-0 flex flex-col justify-start">
+            <div class="font-['Archivo_Black'] text-primary text-[4rem] font-black leading-none mb-3" style="font-family: 'Archivo Black', sans-serif;">02 / PLAN</div>
+            <p class="text-white text-opacity-80 text-sm md:text-base leading-relaxed font-sans mt-2">
+              I map out the site structure, content plan, or social media calendar. 
+              You get a clear outline before any design or code begins, so there are 
+              no surprises later.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="service-card min-h-0 flex flex-col justify-start">
+            <div class="font-['Archivo_Black'] text-primary text-[4rem] font-black leading-none mb-3" style="font-family: 'Archivo Black', sans-serif;">03 / BUILD</div>
+            <p class="text-white text-opacity-80 text-sm md:text-base leading-relaxed font-sans mt-2">
+              I build fast, mobile-first, and clean. You get regular updates and can 
+              give feedback at every stage. For social media, I deliver a monthly content 
+              calendar for your approval before anything goes live.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="service-card min-h-0 flex flex-col justify-start">
+            <div class="font-['Archivo_Black'] text-primary text-[4rem] font-black leading-none mb-3" style="font-family: 'Archivo Black', sans-serif;">04 / LAUNCH</div>
+            <p class="text-white text-opacity-80 text-sm md:text-base leading-relaxed font-sans mt-2">
+              Final delivery, handover, and post-launch support. For websites, I handle 
+              deployment. For social media, I manage scheduling and reporting. 
+              You stay in control.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 4: CTA ===== -->
+    <section class="cta py-[100px] bg-[#08090c] text-center">
+      <div class="container-main max-w-2xl">
+        <h2 class="uppercase text-white text-3xl md:text-5xl font-black mb-4 tracking-tight" style="font-family: 'Archivo Black', sans-serif;">Ready to Start?</h2>
+        <p class="font-mono text-secondary uppercase text-sm md:text-base font-bold mb-8">WhatsApp me or fill out the contact form.</p>
+        <div class="flex flex-wrap gap-6 justify-center mt-8">
+          <a href="https://wa.me/917558998519" target="_blank" class="pill-btn inline-block">WhatsApp Me &rarr;</a>
+          <a href="contact.html" class="pill-btn inline-block">Contact Form &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="container-main">
+        <h2 class="footer-heading">Websites that work. Content that converts.</h2>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <span class="footer-logo">ABHI.DEV</span>
+          </div>
+          <div class="footer-col">
+            <span class="footer-label">/Quick links</span>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="services.html">Services</a>
+              <a href="works.html">Works</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <span class="footer-label">/Contact</span>
+            <a href="mailto:abhinanthpy1@gmail.com" class="footer-email">abhinanthpy1@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-watermark">ABHI</div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Abhinanth PY</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#c5ff1a',
+              secondary: '#00f0ff',
+              accent: '#ff007f',
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== Pac-Man Loader ===== -->
+    <div class="loader-wrapper" id="page-loader">
+      <div class="pacman-container">
+        <div class="pacman"></div>
+        <div class="pacman-dot"></div>
+        <div class="pacman-dot"></div>
+        <div class="pacman-dot"></div>
+      </div>
+      <div class="loader-text">Loading Portfolio...</div>
+    </div>
+
+    <!-- ===== Grain Overlay ===== -->
+    <div class="grain-overlay"></div>
+
+    <!-- ===== Custom Cursor ===== -->
+    <div class="custom-cursor"></div>
+
+    <!-- ===== Top Banner ===== -->
+    <div class="top-banner">
+      <span>Open to Work — Web Dev &amp; Social Media</span>
+      <span>Based in Kerala 🇮🇳 | Available Worldwide</span>
+    </div>
+
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">ABHI</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html" style="background: #00f0ff; color: #08090c; border-color: #ffffff; transform: translate(-2px, -2px); box-shadow: 3px 3px 0px 0px #ffffff;">About</a>
+          <a href="services.html">Services</a>
+          <a href="works.html">Works</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <button class="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== Mobile Menu ===== -->
+    <div class="mobile-menu">
+      <button class="mobile-close" aria-label="Close menu">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mobile-links">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link" style="background: #00f0ff; color: #08090c; box-shadow: 6px 6px 0px 0px #ff007f; transform: translate(-3px, -3px);">About</a>
+        <a href="services.html" class="mobile-link">Services</a>
+        <a href="works.html" class="mobile-link">Works</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+      </div>
+    </div>
+
+    <!-- ===== Section 1: Hero Intro ===== -->
+    <section class="hero min-h-0 py-[100px] border-b-4 border-white" id="about-hero">
+      <div class="absolute top-8 left-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
+      <div class="absolute top-8 right-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
+
+      <div class="container-main w-full">
+        <div class="w-full flex flex-col items-start text-left">
+          <h1 class="uppercase text-white tracking-tight leading-none mb-12 w-full" style="font-family: 'Archivo Black', sans-serif; font-size: clamp(3rem, 10vw, 6rem); border-bottom: 3px solid #c5ff1a; padding-bottom: 20px; display: block;">
+            WHO I AM.
+          </h1>
+        </div>
+
+        <div class="hero-bio">
+          <div class="bio-col">
+            <span class="block font-mono text-[0.7rem] uppercase text-primary mb-3">// PROFILE 01</span>
+            <p>I'm Abhinanth PY — a freelance web developer and B.Sc Nursing graduate from Kerala, India. I started building websites during the COVID-19 lockdown in 2020 and haven't stopped since. In two years I delivered 20+ websites across healthcare, real estate, interiors, education, art, and hospitality.</p>
+          </div>
+          <div class="bio-col">
+            <span class="block font-mono text-[0.7rem] uppercase text-secondary mb-3">// PROFILE 02</span>
+            <p>I'm also a registered nurse with a specialisation interest in Cathlab, ICU, and Emergency — and I completed a clinical internship at Medanta Hospital, Gurugram. I bring the same precision and attention to detail from clinical care into every line of code and every piece of content I create.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 2: Skills / Stack ===== -->
+    <section class="services border-b-4 border-white" id="skills">
+      <div class="container-main">
+        <h2 class="section-title">Skills &amp; Stack</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Card 1 -->
+          <div class="service-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-secondary">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>SKL // 01</span>
+            </div>
+            <h3>Frontend Development</h3>
+            <div class="tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Responsive Design</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-secondary">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>SKL // 02</span>
+            </div>
+            <h3>WordPress &amp; CMS</h3>
+            <div class="tags">
+              <span class="tag">WordPress</span>
+              <span class="tag">Elementor</span>
+              <span class="tag">WooCommerce</span>
+              <span class="tag">SEO Plugins</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-secondary">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>SKL // 03</span>
+            </div>
+            <h3>Social Media Management</h3>
+            <div class="tags">
+              <span class="tag">Instagram</span>
+              <span class="tag">Facebook</span>
+              <span class="tag">Content Calendar</span>
+              <span class="tag">DM Automation</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-secondary">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>SKL // 04</span>
+            </div>
+            <h3>SEO &amp; Analytics</h3>
+            <div class="tags">
+              <span class="tag">On-Page SEO</span>
+              <span class="tag">Google Analytics</span>
+              <span class="tag">Search Console</span>
+              <span class="tag">Schema</span>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="service-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-secondary">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>SKL // 05</span>
+            </div>
+            <h3>Design &amp; Video</h3>
+            <div class="tags">
+              <span class="tag">Figma</span>
+              <span class="tag">Canva</span>
+              <span class="tag">CapCut</span>
+              <span class="tag">4K Video Editing</span>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="service-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-secondary">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>SKL // 06</span>
+            </div>
+            <h3>Clinical Nursing</h3>
+            <div class="tags">
+              <span class="tag">ICU / CCU</span>
+              <span class="tag">Cathlab</span>
+              <span class="tag">Emergency</span>
+              <span class="tag">Medanta Internship</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 3: Journey (Timeline) ===== -->
+    <section id="timeline" class="py-[100px] border-b-4 border-white bg-[#08090c]">
+      <div class="container-main max-w-4xl">
+        <h2 class="section-title">Journey</h2>
+        <div class="relative ml-4 md:ml-8 pl-8 md:pl-12 space-y-8 py-4" style="border-left: 3px solid #c5ff1a;">
+          
+          <!-- Entry 1 -->
+          <div class="relative">
+            <div class="absolute -left-[45px] md:-left-[61px] top-8 w-6 h-6 bg-[#08090c] border-[3px] border-[#c5ff1a] z-10 flex items-center justify-center">
+              <div class="w-2 h-2 bg-[#00f0ff]"></div>
+            </div>
+            <div class="blog-card">
+              <span class="font-mono text-secondary font-bold text-xs uppercase mb-2 block">[2019]</span>
+              <h3 class="font-['Archivo_Black'] text-white uppercase text-base md:text-lg font-black tracking-tight mb-2" style="font-family: 'Archivo Black', sans-serif;">Completed S.S.L.C — 83%</h3>
+              <p class="text-white text-opacity-75 text-sm leading-relaxed font-sans">SKVHSS Nanniyode, Kerala</p>
+            </div>
+          </div>
+
+          <!-- Entry 2 -->
+          <div class="relative">
+            <div class="absolute -left-[45px] md:-left-[61px] top-8 w-6 h-6 bg-[#08090c] border-[3px] border-[#c5ff1a] z-10 flex items-center justify-center">
+              <div class="w-2 h-2 bg-[#00f0ff]"></div>
+            </div>
+            <div class="blog-card">
+              <span class="font-mono text-secondary font-bold text-xs uppercase mb-2 block">[2020]</span>
+              <h3 class="font-['Archivo_Black'] text-white uppercase text-base md:text-lg font-black tracking-tight mb-2" style="font-family: 'Archivo Black', sans-serif;">Started Freelance Web Development</h3>
+              <p class="text-white text-opacity-75 text-sm leading-relaxed font-sans">Built first websites during the COVID-19 lockdown. Discovered a passion for clean, fast, functional design.</p>
+            </div>
+          </div>
+
+          <!-- Entry 3 -->
+          <div class="relative">
+            <div class="absolute -left-[45px] md:-left-[61px] top-8 w-6 h-6 bg-[#08090c] border-[3px] border-[#c5ff1a] z-10 flex items-center justify-center">
+              <div class="w-2 h-2 bg-[#00f0ff]"></div>
+            </div>
+            <div class="blog-card">
+              <span class="font-mono text-secondary font-bold text-xs uppercase mb-2 block">[2021]</span>
+              <h3 class="font-['Archivo_Black'] text-white uppercase text-base md:text-lg font-black tracking-tight mb-2" style="font-family: 'Archivo Black', sans-serif;">Joined B.Sc Nursing — Prajwal College</h3>
+              <p class="text-white text-opacity-75 text-sm leading-relaxed font-sans">Enrolled in B.Sc Nursing while continuing to take freelance web projects on the side.</p>
+            </div>
+          </div>
+
+          <!-- Entry 4 -->
+          <div class="relative">
+            <div class="absolute -left-[45px] md:-left-[61px] top-8 w-6 h-6 bg-[#08090c] border-[3px] border-[#c5ff1a] z-10 flex items-center justify-center">
+              <div class="w-2 h-2 bg-[#00f0ff]"></div>
+            </div>
+            <div class="blog-card">
+              <span class="font-mono text-secondary font-bold text-xs uppercase mb-2 block">[2022–23]</span>
+              <h3 class="font-['Archivo_Black'] text-white uppercase text-base md:text-lg font-black tracking-tight mb-2" style="font-family: 'Archivo Black', sans-serif;">20+ Websites Delivered</h3>
+              <p class="text-white text-opacity-75 text-sm leading-relaxed font-sans">Healthcare clinics, real estate developers, interior studios, art galleries, salons, and educational institutions across Kerala and the UK.</p>
+            </div>
+          </div>
+
+          <!-- Entry 5 -->
+          <div class="relative">
+            <div class="absolute -left-[45px] md:-left-[61px] top-8 w-6 h-6 bg-[#08090c] border-[3px] border-[#c5ff1a] z-10 flex items-center justify-center">
+              <div class="w-2 h-2 bg-[#00f0ff]"></div>
+            </div>
+            <div class="blog-card">
+              <span class="font-mono text-secondary font-bold text-xs uppercase mb-2 block">[2024]</span>
+              <h3 class="font-['Archivo_Black'] text-white uppercase text-base md:text-lg font-black tracking-tight mb-2" style="font-family: 'Archivo Black', sans-serif;">Clinical Internship — Medanta Hospital, Gurugram</h3>
+              <p class="text-white text-opacity-75 text-sm leading-relaxed font-sans">Specialised internship in the Cardiac Catheterization Laboratory (Cathlab).</p>
+            </div>
+          </div>
+
+          <!-- Entry 6 -->
+          <div class="relative">
+            <div class="absolute -left-[45px] md:-left-[61px] top-8 w-6 h-6 bg-[#08090c] border-[3px] border-[#c5ff1a] z-10 flex items-center justify-center">
+              <div class="w-2 h-2 bg-[#00f0ff]"></div>
+            </div>
+            <div class="blog-card">
+              <span class="font-mono text-secondary font-bold text-xs uppercase mb-2 block">[2025]</span>
+              <h3 class="font-['Archivo_Black'] text-white uppercase text-base md:text-lg font-black tracking-tight mb-2" style="font-family: 'Archivo Black', sans-serif;">Graduated B.Sc Nursing — Distinction</h3>
+              <p class="text-white text-opacity-75 text-sm leading-relaxed font-sans">Completed B.Sc Nursing with Distinction from Prajwal College of Nursing, Karnataka.</p>
+            </div>
+          </div>
+
+          <!-- Entry 7 -->
+          <div class="relative">
+            <div class="absolute -left-[45px] md:-left-[61px] top-8 w-6 h-6 bg-[#08090c] border-[3px] border-[#c5ff1a] z-10 flex items-center justify-center">
+              <div class="w-2 h-2 bg-[#00f0ff]"></div>
+            </div>
+            <div class="blog-card">
+              <span class="font-mono text-secondary font-bold text-xs uppercase mb-2 block">[2026]</span>
+              <h3 class="font-['Archivo_Black'] text-white uppercase text-base md:text-lg font-black tracking-tight mb-2" style="font-family: 'Archivo Black', sans-serif;">Full-Stack Freelancer &amp; Social Media Manager</h3>
+              <p class="text-white text-opacity-75 text-sm leading-relaxed font-sans">Offering web development, SEO, and social media management to businesses across Kerala and globally. Open to nursing opportunities in Cathlab, ICU, or Emergency settings.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 4: CTA ===== -->
+    <section class="cta py-[100px] bg-[#08090c] text-center">
+      <div class="container-main max-w-2xl">
+        <h2 class="uppercase text-white text-3xl md:text-5xl font-black mb-4 tracking-tight" style="font-family: 'Archivo Black', sans-serif;">Let's Work Together.</h2>
+        <p class="font-mono text-secondary uppercase text-sm md:text-base font-bold mb-8">Web dev, social media, or both — I'm available.</p>
+        <a href="contact.html" class="pill-btn inline-block">Get In Touch &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="container-main">
+        <h2 class="footer-heading">Websites that work. Content that converts.</h2>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <span class="footer-logo">ABHI.DEV</span>
+          </div>
+          <div class="footer-col">
+            <span class="footer-label">/Quick links</span>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="services.html">Services</a>
+              <a href="works.html">Works</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <span class="footer-label">/Contact</span>
+            <a href="mailto:abhinanthpy1@gmail.com" class="footer-email">abhinanthpy1@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-watermark">ABHI</div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Works — Abhinanth PY</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#c5ff1a',
+              secondary: '#00f0ff',
+              accent: '#ff007f',
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== Pac-Man Loader ===== -->
+    <div class="loader-wrapper" id="page-loader">
+      <div class="pacman-container">
+        <div class="pacman"></div>
+        <div class="pacman-dot"></div>
+        <div class="pacman-dot"></div>
+        <div class="pacman-dot"></div>
+      </div>
+      <div class="loader-text">Loading Portfolio...</div>
+    </div>
+
+    <!-- ===== Grain Overlay ===== -->
+    <div class="grain-overlay"></div>
+
+    <!-- ===== Custom Cursor ===== -->
+    <div class="custom-cursor"></div>
+
+    <!-- ===== Top Banner ===== -->
+    <div class="top-banner">
+      <span>Open to Work — Web Dev &amp; Social Media</span>
+      <span>Based in Kerala 🇮🇳 | Available Worldwide</span>
+    </div>
+
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">ABHI</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="works.html" style="background: #00f0ff; color: #08090c; border-color: #ffffff; transform: translate(-2px, -2px); box-shadow: 3px 3px 0px 0px #ffffff;">Works</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <button class="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== Mobile Menu ===== -->
+    <div class="mobile-menu">
+      <button class="mobile-close" aria-label="Close menu">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mobile-links">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="services.html" class="mobile-link">Services</a>
+        <a href="works.html" class="mobile-link" style="background: #00f0ff; color: #08090c; box-shadow: 6px 6px 0px 0px #ff007f; transform: translate(-3px, -3px);">Works</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+      </div>
+    </div>
+
+    <!-- ===== Section 1: Hero Intro ===== -->
+    <section class="hero min-h-0 py-[100px] border-b-4 border-white" id="works-hero">
+      <div class="absolute top-8 left-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
+      <div class="absolute top-8 right-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
+
+      <div class="container-main w-full">
+        <div class="w-full flex flex-col items-start text-left">
+          <h1 class="uppercase text-white tracking-tight leading-none mb-4 w-full" style="font-family: 'Archivo Black', sans-serif; font-size: clamp(3rem, 10vw, 6rem); border-bottom: 3px solid #c5ff1a; padding-bottom: 20px; display: block;">
+            MY WORKS.
+          </h1>
+          <p class="font-mono text-primary uppercase text-lg font-bold mt-4">12 projects. 6 industries. All of Kerala and beyond.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 2: Projects Grid ===== -->
+    <section class="projects border-b-4 border-white bg-[#08090c]" id="all-works">
+      <div class="container-main">
+        <h2 class="section-title">All Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+          
+          <!-- Project 01 -->
+          <a href="https://wellcarephysiotherapy.in/index.html" target="_blank" class="project-card" data-gradient="damas">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3">
+              <span class="text-secondary font-bold">[ONLINE]</span>
+              <span class="text-accent font-bold">PRJ // 01</span>
+            </div>
+            <div class="project-image">
+              <video src="prg/wellcare.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="project-overlay">
+              <span>VISIT SITE &rarr;</span>
+            </div>
+            <h3 class="text-white text-base md:text-lg font-black uppercase mt-4 mb-2 tracking-tight px-1" style="font-family: 'Archivo Black', sans-serif;">Wellcare Physiotherapy</h3>
+            <div class="flex flex-wrap gap-2 mb-2 px-1">
+              <span class="tag">Healthcare</span>
+              <span class="tag">Kerala</span>
+            </div>
+          </a>
+
+          <!-- Project 02 -->
+          <a href="https://arinterio.co.in" target="_blank" class="project-card" data-gradient="najm">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3">
+              <span class="text-secondary font-bold">[ONLINE]</span>
+              <span class="text-accent font-bold">PRJ // 02</span>
+            </div>
+            <div class="project-image">
+              <video src="prg/ar.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="project-overlay">
+              <span>VISIT SITE &rarr;</span>
+            </div>
+            <h3 class="text-white text-base md:text-lg font-black uppercase mt-4 mb-2 tracking-tight px-1" style="font-family: 'Archivo Black', sans-serif;">AR Interiors</h3>
+            <div class="flex flex-wrap gap-2 mb-2 px-1">
+              <span class="tag">Interior Design</span>
+              <span class="tag">Kerala</span>
+            </div>
+          </a>
+
+          <!-- Project 03 -->
+          <a href="https://www.faciliofms.com" target="_blank" class="project-card" data-gradient="kavi">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3">
+              <span class="text-secondary font-bold">[ONLINE]</span>
+              <span class="text-accent font-bold">PRJ // 03</span>
+            </div>
+            <div class="project-image"></div>
+            <div class="project-overlay">
+              <span>VISIT SITE &rarr;</span>
+            </div>
+            <h3 class="text-white text-base md:text-lg font-black uppercase mt-4 mb-2 tracking-tight px-1" style="font-family: 'Archivo Black', sans-serif;">Facilio FMS</h3>
+            <div class="flex flex-wrap gap-2 mb-2 px-1">
+              <span class="tag">Facility Management</span>
+              <span class="tag">SaaS</span>
+            </div>
+          </a>
+
+          <!-- Project 04 -->
+          <a href="https://www.bhuspaces.in" target="_blank" class="project-card" data-gradient="sham">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3">
+              <span class="text-secondary font-bold">[ONLINE]</span>
+              <span class="text-accent font-bold">PRJ // 04</span>
+            </div>
+            <div class="project-image"></div>
+            <div class="project-overlay">
+              <span>VISIT SITE &rarr;</span>
+            </div>
+            <h3 class="text-white text-base md:text-lg font-black uppercase mt-4 mb-2 tracking-tight px-1" style="font-family: 'Archivo Black', sans-serif;">BHU Spaces</h3>
+            <div class="flex flex-wrap gap-2 mb-2 px-1">
+              <span class="tag">Real Estate</span>
+              <span class="tag">Kerala</span>
+            </div>
+          </a>
+
+          <!-- Project 05 -->
+          <a href="https://skillpinnacle.com" target="_blank" class="project-card" data-gradient="damas">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3">
+              <span class="text-secondary font-bold">[ONLINE]</span>
+              <span class="text-accent font-bold">PRJ // 05</span>
+            </div>
+            <div class="project-image">
+              <video src="prg/skillpinnical.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="project-overlay">
+              <span>VISIT SITE &rarr;</span>
+            </div>
+            <h3 class="text-white text-base md:text-lg font-black uppercase mt-4 mb-2 tracking-tight px-1" style="font-family: 'Archivo Black', sans-serif;">Skill Pinnacle</h3>
+            <div class="flex flex-wrap gap-2 mb-2 px-1">
+              <span class="tag">Corporate Training</span>
+              <span class="tag">Kerala &amp; UAE</span>
+            </div>
+          </a>
+
+          <!-- Project 06 -->
+          <a href="http://shaniart.uk/" target="_blank" class="project-card" data-gradient="najm">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3">
+              <span class="text-secondary font-bold">[ONLINE]</span>
+              <span class="text-accent font-bold">PRJ // 06</span>
+            </div>
+            <div class="project-image"></div>
+            <div class="project-overlay">
+              <span>VISIT SITE &rarr;</span>
+            </div>
+            <h3 class="text-white text-base md:text-lg font-black uppercase mt-4 mb-2 tracking-tight px-1" style="font-family: 'Archivo Black', sans-serif;">Shani Art</h3>
+            <div class="flex flex-wrap gap-2 mb-2 px-1">
+              <span class="tag">Art Gallery</span>
+              <span class="tag">UK</span>
+            </div>
+          </a>
+
+          <!-- Project 07 -->
+          <a href="#" class="project-card" data-gradient="kavi">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3">
+              <span class="text-secondary font-bold">[SOCIAL]</span>
+              <span class="text-accent font-bold">PRJ // 07</span>
+            </div>
+            <div class="project-image"></div>
+            <div class="project-overlay">
+              <span>VISIT SITE &rarr;</span>
+            </div>
+            <h3 class="text-white text-base md:text-lg font-black uppercase mt-4 mb-2 tracking-tight px-1" style="font-family: 'Archivo Black', sans-serif;">Act II Salon</h3>
+            <div class="flex flex-wrap gap-2 mb-2 px-1">
+              <span class="tag">Hospitality</span>
+              <span class="tag">Social Media</span>
+            </div>
+          </a>
+
+          <!-- Project 08 -->
+          <a href="https://rbchomeskerala.com" target="_blank" class="project-card" data-gradient="sham">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3">
+              <span class="text-secondary font-bold">[ONLINE]</span>
+              <span class="text-accent font-bold">PRJ // 08</span>
+            </div>
+            <div class="project-image">
+              <video src="prg/rbc.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="project-overlay">
+              <span>VISIT SITE &rarr;</span>
+            </div>
+            <h3 class="text-white text-base md:text-lg font-black uppercase mt-4 mb-2 tracking-tight px-1" style="font-family: 'Archivo Black', sans-serif;">RBC Homes</h3>
+            <div class="flex flex-wrap gap-2 mb-2 px-1">
+              <span class="tag">Luxury Real Estate</span>
+              <span class="tag">Trivandrum</span>
+            </div>
+          </a>
+
+          <!-- Project 09 -->
+          <a href="https://abhinanthpy132.github.io/GangothriGroup/" target="_blank" class="project-card" data-gradient="damas">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3">
+              <span class="text-secondary font-bold">[ONLINE]</span>
+              <span class="text-accent font-bold">PRJ // 09</span>
+            </div>
+            <div class="project-image"></div>
+            <div class="project-overlay">
+              <span>VISIT SITE &rarr;</span>
+            </div>
+            <h3 class="text-white text-base md:text-lg font-black uppercase mt-4 mb-2 tracking-tight px-1" style="font-family: 'Archivo Black', sans-serif;">Gangothri Group</h3>
+            <div class="flex flex-wrap gap-2 mb-2 px-1">
+              <span class="tag">Business</span>
+              <span class="tag">Kerala</span>
+            </div>
+          </a>
+
+          <!-- Project 10 -->
+          <a href="https://asteroidin.github.io/mes/" target="_blank" class="project-card" data-gradient="najm">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3">
+              <span class="text-secondary font-bold">[ONLINE]</span>
+              <span class="text-accent font-bold">PRJ // 10</span>
+            </div>
+            <div class="project-image"></div>
+            <div class="project-overlay">
+              <span>VISIT SITE &rarr;</span>
+            </div>
+            <h3 class="text-white text-base md:text-lg font-black uppercase mt-4 mb-2 tracking-tight px-1" style="font-family: 'Archivo Black', sans-serif;">MES</h3>
+            <div class="flex flex-wrap gap-2 mb-2 px-1">
+              <span class="tag">Education</span>
+              <span class="tag">Kerala</span>
+            </div>
+          </a>
+
+          <!-- Project 11 -->
+          <a href="https://asteroidin.github.io/brandcity/" target="_blank" class="project-card" data-gradient="kavi">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3">
+              <span class="text-secondary font-bold">[ONLINE]</span>
+              <span class="text-accent font-bold">PRJ // 11</span>
+            </div>
+            <div class="project-image"></div>
+            <div class="project-overlay">
+              <span>VISIT SITE &rarr;</span>
+            </div>
+            <h3 class="text-white text-base md:text-lg font-black uppercase mt-4 mb-2 tracking-tight px-1" style="font-family: 'Archivo Black', sans-serif;">Brand City</h3>
+            <div class="flex flex-wrap gap-2 mb-2 px-1">
+              <span class="tag">Branding</span>
+              <span class="tag">Agency</span>
+            </div>
+          </a>
+
+          <!-- Project 12 -->
+          <a href="https://abhinanthpy132.github.io/pnp/" target="_blank" class="project-card" data-gradient="sham">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3">
+              <span class="text-secondary font-bold">[ONLINE]</span>
+              <span class="text-accent font-bold">PRJ // 12</span>
+            </div>
+            <div class="project-image"></div>
+            <div class="project-overlay">
+              <span>VISIT SITE &rarr;</span>
+            </div>
+            <h3 class="text-white text-base md:text-lg font-black uppercase mt-4 mb-2 tracking-tight px-1" style="font-family: 'Archivo Black', sans-serif;">PNP Project</h3>
+            <div class="flex flex-wrap gap-2 mb-2 px-1">
+              <span class="tag">Business</span>
+              <span class="tag">Kerala</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 3: CTA ===== -->
+    <section class="cta py-[100px] bg-[#08090c] text-center">
+      <div class="container-main max-w-2xl">
+        <h2 class="uppercase text-white text-3xl md:text-5xl font-black mb-4 tracking-tight" style="font-family: 'Archivo Black', sans-serif;">Have a Project in Mind?</h2>
+        <p class="font-mono text-secondary uppercase text-sm md:text-base font-bold mb-8">Let's build something great together.</p>
+        <a href="contact.html" class="pill-btn inline-block">Start a Project &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="container-main">
+        <h2 class="footer-heading">Websites that work. Content that converts.</h2>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <span class="footer-logo">ABHI.DEV</span>
+          </div>
+          <div class="footer-col">
+            <span class="footer-label">/Quick links</span>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="services.html">Services</a>
+              <a href="works.html">Works</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <span class="footer-label">/Contact</span>
+            <a href="mailto:abhinanthpy1@gmail.com" class="footer-email">abhinanthpy1@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-watermark">ABHI</div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

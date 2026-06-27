@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Abhinanth PY</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#c5ff1a',
+              secondary: '#00f0ff',
+              accent: '#ff007f',
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* FAQ Accordion Styling */
+      .faq-item.open .faq-icon {
+        transform: rotate(90deg);
+      }
+      
+      /* WhatsApp link custom hover transitions */
+      .whatsapp-link:hover {
+        background: #25D366 !important;
+        border-color: #ffffff !important;
+      }
+      .whatsapp-link:hover .wa-text,
+      .whatsapp-link:hover .wa-subtext,
+      .whatsapp-link:hover .wa-icon {
+        color: #08090c !important;
+      }
+
+      /* Custom Select focus transition style */
+      .custom-select:focus {
+        border-color: #c5ff1a !important;
+        box-shadow: 5px 5px 0px 0px #00f0ff !important;
+        transform: translate(-2px, -2px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== Pac-Man Loader ===== -->
+    <div class="loader-wrapper" id="page-loader">
+      <div class="pacman-container">
+        <div class="pacman"></div>
+        <div class="pacman-dot"></div>
+        <div class="pacman-dot"></div>
+        <div class="pacman-dot"></div>
+      </div>
+      <div class="loader-text">Loading Portfolio...</div>
+    </div>
+
+    <!-- ===== Grain Overlay ===== -->
+    <div class="grain-overlay"></div>
+
+    <!-- ===== Custom Cursor ===== -->
+    <div class="custom-cursor"></div>
+
+    <!-- ===== Top Banner ===== -->
+    <div class="top-banner">
+      <span>Open to Work — Web Dev &amp; Social Media</span>
+      <span>Based in Kerala 🇮🇳 | Available Worldwide</span>
+    </div>
+
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">ABHI</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="works.html">Works</a>
+          <a href="contact.html" style="background: #00f0ff; color: #08090c; border-color: #ffffff; transform: translate(-2px, -2px); box-shadow: 3px 3px 0px 0px #ffffff;">Contact</a>
+        </div>
+        <button class="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== Mobile Menu ===== -->
+    <div class="mobile-menu">
+      <button class="mobile-close" aria-label="Close menu">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mobile-links">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="services.html" class="mobile-link">Services</a>
+        <a href="works.html" class="mobile-link">Works</a>
+        <a href="contact.html" class="mobile-link" style="background: #00f0ff; color: #08090c; box-shadow: 6px 6px 0px 0px #ff007f; transform: translate(-3px, -3px);">Contact</a>
+      </div>
+    </div>
+
+    <!-- ===== Section 1: Hero Intro ===== -->
+    <section class="hero min-h-0 py-[100px] border-b-4 border-white" id="contact-hero">
+      <div class="absolute top-8 left-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
+      <div class="absolute top-8 right-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
+
+      <div class="container-main w-full">
+        <div class="w-full flex flex-col items-start text-left">
+          <h1 class="uppercase text-white tracking-tight leading-none mb-4 w-full" style="font-family: 'Archivo Black', sans-serif; font-size: clamp(3rem, 10vw, 6.5rem); border-bottom: 3px solid #c5ff1a; padding-bottom: 20px; display: block;">
+            LET'S BUILD SOMETHING.
+          </h1>
+          <p class="font-mono text-primary uppercase text-lg font-bold mt-4">Reply within 24 hours. WhatsApp preferred.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 2: Contact Grid ===== -->
+    <section class="contact border-b-4 border-white bg-[#08090c]" id="contact">
+      <div class="container-main">
+        <div class="contact-grid">
+          
+          <!-- Left Column: Socials, WhatsApp & Info -->
+          <div class="flex flex-col gap-6">
+            
+            <!-- Social Buttons -->
+            <div class="contact-socials flex gap-4">
+              <a href="#" class="social-btn" aria-label="Twitter/X">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                </svg>
+              </a>
+              <a href="https://instagram.com/abhinanthpy" target="_blank" class="social-btn" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <circle cx="12" cy="12" r="5" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+              </a>
+              <a href="https://linkedin.com/in/abhinanthpy" target="_blank" class="social-btn" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a href="#" class="social-btn" aria-label="YouTube">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z" />
+                  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- WhatsApp block -->
+            <a href="https://wa.me/917558998519" target="_blank" class="whatsapp-link flex items-center gap-5 p-6 bg-[#171821] shadow-[5px_5px_0px_0px_#25D366] transition-all duration-200 hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#25D366]" style="border: 3px solid #25D366;">
+              <svg class="wa-icon w-9 h-9 text-[#25D366] transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.528 2.017 14.077.99 11.517.99c-5.44 0-9.865 4.37-9.869 9.803-.001 1.79.488 3.541 1.417 5.093l-.979 3.578 3.662-.96zm12.39-5.32c-.326-.162-1.927-.946-2.223-1.054-.297-.109-.513-.162-.73.162-.216.324-.838 1.054-1.027 1.27-.19.216-.378.243-.704.081-.326-.162-1.375-.505-2.62-1.613-.968-.862-1.622-1.927-1.812-2.25-.19-.324-.02-.5-.182-.661-.147-.146-.326-.378-.488-.567-.162-.189-.216-.324-.326-.54-.109-.217-.055-.405-.027-.567.028-.162.216-.513.326-.675.109-.162.146-.27.216-.405.07-.135.034-.253-.014-.351-.047-.098-.405-1.002-.556-1.365-.147-.354-.297-.306-.407-.311-.104-.005-.224-.006-.343-.006-.12 0-.313.045-.477.223-.164.178-.626.611-.626 1.49 0 .879.641 1.728.73 1.847.09.119 1.261 1.925 3.056 2.697.427.184.76.294 1.019.377.429.136.819.117 1.127.071.343-.051 1.054-.43 1.203-.846.148-.417.148-.775.104-.846-.044-.071-.162-.119-.488-.281z"/>
+              </svg>
+              <div>
+                <span class="wa-text font-mono text-white text-base font-bold tracking-wider block transition-colors duration-200">WHATSAPP ME</span>
+                <span class="wa-subtext font-mono text-primary text-sm font-semibold block transition-colors duration-200 mt-0.5">+91 7558998519</span>
+              </div>
+            </a>
+
+            <!-- Info block card -->
+            <div class="service-card w-full min-h-0 flex flex-col gap-4">
+              <div class="flex flex-col gap-1 pb-3 border-b border-white/20">
+                <span class="font-mono text-secondary text-[0.75rem] uppercase font-bold tracking-wider">// LOCATION</span>
+                <span class="text-white text-base font-semibold font-sans">Kerala, India</span>
+              </div>
+              <div class="flex flex-col gap-1 pb-3 border-b border-white/20">
+                <span class="font-mono text-secondary text-[0.75rem] uppercase font-bold tracking-wider">// EMAIL</span>
+                <a href="mailto:abhinanthpy1@gmail.com" class="text-white text-base font-semibold font-sans hover:text-primary transition-colors duration-150">abhinanthpy1@gmail.com</a>
+              </div>
+              <div class="flex flex-col gap-1">
+                <span class="font-mono text-secondary text-[0.75rem] uppercase font-bold tracking-wider">// AVAILABILITY</span>
+                <span class="text-white text-base font-semibold font-sans">Open to Work — Web &amp; Nursing</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Contact Form -->
+          <form class="contact-form">
+            <div class="flex items-center gap-1.5 border-b-2 border-white pb-3 mb-4">
+              <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+              <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+              <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              <span class="font-mono text-[0.8rem] uppercase ml-2 text-white">SEND_MESSAGE.EXE</span>
+            </div>
+            
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+
+            <!-- Service Needed Dropdown -->
+            <div class="form-group">
+              <select name="service" required class="custom-select" style="width: 100%; background: #08090c; border: 3px solid #ffffff; border-radius: 0px; padding: 16px 20px; color: rgba(255,255,255,0.4); font-family: 'Space Mono', monospace; font-size: 0.95rem; outline: none; box-shadow: 3px 3px 0px 0px #ffffff; transition: all 0.15s ease; cursor: pointer; appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23c5ff1a%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 20px center; background-size: 12px auto;" onchange="this.style.color='#ffffff'">
+                <option value="" disabled selected hidden>Service Needed</option>
+                <option value="Website Design" style="background: #171821; color: #ffffff;">Website Design</option>
+                <option value="Social Media Management" style="background: #171821; color: #ffffff;">Social Media Management</option>
+                <option value="SEO" style="background: #171821; color: #ffffff;">SEO</option>
+                <option value="Both Web + Social" style="background: #171821; color: #ffffff;">Both Web + Social</option>
+                <option value="Other" style="background: #171821; color: #ffffff;">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <textarea name="project" rows="4" placeholder="Tell us about your project..." required></textarea>
+            </div>
+            
+            <button type="submit" class="pill-btn full-width">Submit &rarr;</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Section 3: FAQ ===== -->
+    <section class="services bg-[#08090c] pt-0 pb-[120px]" id="faq">
+      <div class="container-main max-w-4xl">
+        <h2 class="section-title">Quick FAQ</h2>
+        <div class="flex flex-col gap-6 mt-12 w-full">
+          
+          <!-- Q1 -->
+          <div class="blog-card faq-item cursor-pointer w-full p-6 select-none" onclick="toggleFaq(this)">
+            <div class="flex justify-between items-center gap-4">
+              <h3 class="font-['Archivo_Black'] text-white uppercase text-base md:text-lg font-black tracking-tight" style="font-family: 'Archivo Black', sans-serif; margin: 0;">How much does a website cost?</h3>
+              <div class="faq-icon text-primary transition-transform duration-200">
+                <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <p class="text-white text-opacity-80 text-sm md:text-base leading-relaxed mt-4 font-sans border-t border-white/20 pt-4">
+                It depends on the scope — a simple landing page starts around ₹8,000–₹15,000. 
+                A full multi-page business website with SEO ranges from ₹20,000–₹50,000. 
+                WhatsApp me with your requirements for an exact quote.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="blog-card faq-item cursor-pointer w-full p-6 select-none" onclick="toggleFaq(this)">
+            <div class="flex justify-between items-center gap-4">
+              <h3 class="font-['Archivo_Black'] text-white uppercase text-base md:text-lg font-black tracking-tight" style="font-family: 'Archivo Black', sans-serif; margin: 0;">Do you work with clients outside Kerala?</h3>
+              <div class="faq-icon text-primary transition-transform duration-200">
+                <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <p class="text-white text-opacity-80 text-sm md:text-base leading-relaxed mt-4 font-sans border-t border-white/20 pt-4">
+                Yes — I've worked with clients in the UK (Shani Art) and serve the UAE market 
+                through Skill Pinnacle. I work fully remotely and communicate via WhatsApp, 
+                email, or video call.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="blog-card faq-item cursor-pointer w-full p-6 select-none" onclick="toggleFaq(this)">
+            <div class="flex justify-between items-center gap-4">
+              <h3 class="font-['Archivo_Black'] text-white uppercase text-base md:text-lg font-black tracking-tight" style="font-family: 'Archivo Black', sans-serif; margin: 0;">How long does a website take?</h3>
+              <div class="faq-icon text-primary transition-transform duration-200">
+                <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <p class="text-white text-opacity-80 text-sm md:text-base leading-relaxed mt-4 font-sans border-t border-white/20 pt-4">
+                A landing page takes 3–5 days. A full business website takes 2–4 weeks 
+                depending on content readiness. Social media setup and first month's calendar 
+                takes about 1 week.
+              </p>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="blog-card faq-item cursor-pointer w-full p-6 select-none" onclick="toggleFaq(this)">
+            <div class="flex justify-between items-center gap-4">
+              <h3 class="font-['Archivo_Black'] text-white uppercase text-base md:text-lg font-black tracking-tight" style="font-family: 'Archivo Black', sans-serif; margin: 0;">Are you available for nursing jobs too?</h3>
+              <div class="faq-icon text-primary transition-transform duration-200">
+                <svg class="w-6 h-6 transform transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <p class="text-white text-opacity-80 text-sm md:text-base leading-relaxed mt-4 font-sans border-t border-white/20 pt-4">
+                Yes — I'm a B.Sc Nursing graduate with distinction and a Cathlab internship 
+                at Medanta Hospital, Gurugram. I'm open to opportunities in Cathlab, ICU, CCU, 
+                OT, or Emergency — in Kerala or abroad.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="container-main">
+        <h2 class="footer-heading">Websites that work. Content that converts.</h2>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <span class="footer-logo">ABHI.DEV</span>
+          </div>
+          <div class="footer-col">
+            <span class="footer-label">/Quick links</span>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="services.html">Services</a>
+              <a href="works.html">Works</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <span class="footer-label">/Contact</span>
+            <a href="mailto:abhinanthpy1@gmail.com" class="footer-email">abhinanthpy1@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-watermark">ABHI</div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+
+    <!-- FAQ Accordion Script -->
+    <script>
+      function toggleFaq(el) {
+        el.classList.toggle('open');
+        const answer = el.querySelector('.faq-answer');
+        if (el.classList.contains('open')) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+          answer.style.maxHeight = '0px';
+        }
+      }
+    </script>
+  </body>
+</html>

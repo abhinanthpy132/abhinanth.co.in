@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhinanth PY — Web Developer &amp; Social Media Manager</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#c5ff1a',
+              secondary: '#00f0ff',
+              accent: '#ff007f',
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== Pac-Man Loader ===== -->
+    <div class="loader-wrapper" id="page-loader">
+      <div class="pacman-container">
+        <div class="pacman"></div>
+        <div class="pacman-dot"></div>
+        <div class="pacman-dot"></div>
+        <div class="pacman-dot"></div>
+      </div>
+      <div class="loader-text">Loading Portfolio...</div>
+    </div>
+
+    <!-- ===== Grain Overlay ===== -->
+    <div class="grain-overlay"></div>
+
+    <!-- ===== Custom Cursor ===== -->
+    <div class="custom-cursor"></div>
+
+    <!-- ===== Top Banner ===== -->
+    <div class="top-banner">
+      <span>Open to Work — Web Dev &amp; Social Media</span>
+      <span>Based in Kerala 🇮🇳 | Available Worldwide</span>
+    </div>
+
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">ABHI</a>
+        <div class="nav-links">
+          <a href="index.html" style="background: #00f0ff; color: #08090c; border-color: #ffffff; transform: translate(-2px, -2px); box-shadow: 3px 3px 0px 0px #ffffff;">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="works.html">Works</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <button class="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== Mobile Menu ===== -->
+    <div class="mobile-menu">
+      <button class="mobile-close" aria-label="Close menu">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mobile-links">
+        <a href="index.html" class="mobile-link" style="background: #00f0ff; color: #08090c; box-shadow: 6px 6px 0px 0px #ff007f; transform: translate(-3px, -3px);">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="services.html" class="mobile-link">Services</a>
+        <a href="works.html" class="mobile-link">Works</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+      </div>
+    </div>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero">
+      <!-- Stark Drafting Crosshairs -->
+      <div class="absolute top-8 left-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
+      <div class="absolute top-8 right-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
+      <div class="absolute bottom-8 left-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
+      <div class="absolute bottom-8 right-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
+
+      <!-- Brutalist Floating Sticker GIF -->
+      <div class="absolute top-16 left-4 md:top-20 md:left-8 w-28 md:w-44 -rotate-6 transition-all duration-200 hover:rotate-0 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_0px_#00f0ff] z-10" style="box-shadow: 4px 4px 0px 0px #c5ff1a;">
+        <img src="assets/828430aa4caa664b123337b66a7e098b.gif" alt="Astro Sticker" class="w-full h-auto block" />
+      </div>
+
+      <div class="hero-labels">
+        <span class="hero-label-left">&copy;2026</span>
+        <span class="hero-label-right">/BUILDING SINCE COVID-2020</span>
+      </div>
+
+      <div class="hero-heading-wrapper">
+        <h1 class="hero-heading">
+          <span class="word">WEB DEV</span>
+          <span class="word">&amp; NURSE</span>
+        </h1>
+        <div class="hero-underline"></div>
+      </div>
+
+      <div class="hero-portrait">
+        <img src="assets/hero-portrait.png" alt="ABHI Portrait" class="portrait-front" />
+        <img src="assets/hero-portrait-alt.png" alt="ABHI Portrait Alt" class="portrait-back" />
+      </div>
+
+      <div class="hero-bio">
+        <div class="bio-col">
+          <span class="block font-mono text-[0.7rem] uppercase text-primary mb-3">// BIO DATA 01</span>
+          <p>I'm a freelance web developer and B.Sc Nursing graduate from Kerala. 
+I started building websites during the COVID lockdown in 2020 and have 
+since delivered 20+ projects across healthcare, real estate, interiors, 
+education, and hospitality — all while completing my nursing degree.</p>
+        </div>
+        <div class="bio-col">
+          <span class="block font-mono text-[0.7rem] uppercase text-secondary mb-3">// BIO DATA 02</span>
+          <p>Based in Kerala, India. I build fast, clean websites using HTML, CSS, 
+JavaScript, and WordPress — and manage social media for businesses 
+that want real growth. My first client, Wellcare Physiotherapy, 
+is still live and ranking on Google today.</p>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="contact.html" class="pill-btn">Get Started &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ===== Marquee ===== -->
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>Healthcare clinics. Real estate firms. Interior studios. Art galleries. Salons. Educational institutes. 20+ websites built across Kerala and beyond — from idea to live, clean and fast.</span>
+        <span>Healthcare clinics. Real estate firms. Interior studios. Art galleries. Salons. Educational institutes. 20+ websites built across Kerala and beyond — from idea to live, clean and fast.</span>
+        <span>Healthcare clinics. Real estate firms. Interior studios. Art galleries. Salons. Educational institutes. 20+ websites built across Kerala and beyond — from idea to live, clean and fast.</span>
+      </div>
+    </div>
+
+    <!-- ===== Services ===== -->
+    <section class="services" id="services">
+      <div class="container-main">
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+          
+          <!-- Card 1 -->
+          <div class="service-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-secondary">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>SRV // 01</span>
+            </div>
+            <h3>Website Design &amp; Build</h3>
+            <div class="tags">
+              <span class="tag">HTML / CSS / JS</span>
+              <span class="tag">WordPress</span>
+              <span class="tag">Mobile Responsive</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="service-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-secondary">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>SRV // 02</span>
+            </div>
+            <h3>Social Media Management</h3>
+            <div class="tags">
+              <span class="tag">Instagram</span>
+              <span class="tag">Facebook</span>
+              <span class="tag">Content Strategy</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="service-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-secondary">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>SRV // 03</span>
+            </div>
+            <h3>SEO &amp; Performance</h3>
+            <div class="tags">
+              <span class="tag">On-Page SEO</span>
+              <span class="tag">Google Analytics</span>
+              <span class="tag">Speed Optimisation</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-secondary">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>SRV // 04</span>
+            </div>
+            <h3>Niche: Healthcare &amp; Real Estate</h3>
+            <div class="tags">
+              <span class="tag">Clinic Websites</span>
+              <span class="tag">Property Listings</span>
+              <span class="tag">Lead Forms</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Featured Projects ===== -->
+    <section class="projects" id="projects">
+      <div class="container-main">
+        <div class="projects-header">
+          <h2 class="section-title" style="margin-bottom: 0;">Featured Projects</h2>
+          <a href="#" class="view-all">View All Work &rarr;</a>
+        </div>
+        <div class="projects-grid">
+          
+          <!-- Project 1 -->
+          <a href="https://wellcarephysiotherapy.in/index.html" target="_blank" class="project-card" data-gradient="damas">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3 text-secondary">
+              <span>WORK // 01</span>
+              <span class="text-primary font-bold">[FILE_OK]</span>
+            </div>
+            <div class="project-image">
+              <video src="prg/wellcare.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="project-overlay">
+              <span>VISIT LIVE SITE &rarr;</span>
+            </div>
+            <h3 class="project-title">Wellcare Physiotherapy — Healthcare Clinic</h3>
+          </a>
+
+          <!-- Project 2 -->
+          <a href="https://rbchomeskerala.com" target="_blank" class="project-card" data-gradient="najm">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3 text-secondary">
+              <span>WORK // 02</span>
+              <span class="text-primary font-bold">[FILE_OK]</span>
+            </div>
+            <div class="project-image">
+              <video src="prg/rbc.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="project-overlay">
+              <span>VISIT LIVE SITE &rarr;</span>
+            </div>
+            <h3 class="project-title">RBC Homes — Luxury Villas &amp; Flats, Trivandrum</h3>
+          </a>
+
+          <!-- Project 3 -->
+          <a href="https://arinterio.co.in" target="_blank" class="project-card" data-gradient="kavi">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3 text-secondary">
+              <span>WORK // 03</span>
+              <span class="text-primary font-bold">[FILE_OK]</span>
+            </div>
+            <div class="project-image">
+              <video src="prg/ar.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="project-overlay">
+              <span>VISIT LIVE SITE &rarr;</span>
+            </div>
+            <h3 class="project-title">AR Interiors — Premium Interior Design, Kerala</h3>
+          </a>
+
+          <!-- Project 4 -->
+          <a href="https://skillpinnacle.com" target="_blank" class="project-card" data-gradient="sham">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3 text-secondary">
+              <span>WORK // 04</span>
+              <span class="text-primary font-bold">[FILE_OK]</span>
+            </div>
+            <div class="project-image">
+              <video src="prg/skillpinnical.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="project-overlay">
+              <span>VISIT LIVE SITE &rarr;</span>
+            </div>
+            <h3 class="project-title">Skill Pinnacle — Corporate Training Platform</h3>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials ===== -->
+    <section class="testimonials" id="testimonials">
+      <div class="container-main">
+        <h2 class="section-title">Testimonials</h2>
+        <div class="testimonials-grid">
+          
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-accent">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>LOG // 01</span>
+            </div>
+            <p class="quote">&ldquo;Abhinanth built our physiotherapy website from scratch. It looks professional, loads fast, and our patients find us easily on Google now. Highly recommended.&rdquo;</p>
+            <div class="testimonial-author">
+              <img src="assets/avatar-1.png" alt="Wellcare Physiotherapy" class="avatar" />
+              <div class="author-info">
+                <span class="author-name">Wellcare Physiotherapy</span>
+                <span class="author-role">Healthcare Clinic, Trivandrum</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-accent">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>LOG // 02</span>
+            </div>
+            <p class="quote">&ldquo;He delivered a clean, premium website for our real estate brand that truly reflects the quality of our villas. Great attention to detail and very easy to work with.&rdquo;</p>
+            <div class="testimonial-author">
+              <img src="assets/avatar-2.png" alt="RBC Homes" class="avatar" />
+              <div class="author-info">
+                <span class="author-name">RBC Homes</span>
+                <span class="author-role">Real Estate, Trivandrum</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-accent">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>LOG // 03</span>
+            </div>
+            <p class="quote">&ldquo;Our interior design website is exactly what we envisioned — elegant, fast, and conversion-focused. Abhinanth understood our brand from the first conversation.&rdquo;</p>
+            <div class="testimonial-author">
+              <img src="assets/avatar-3.png" alt="AR Interiors" class="avatar" />
+              <div class="author-info">
+                <span class="author-name">AR Interiors</span>
+                <span class="author-role">Interior Design Studio, Kerala</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-accent">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>LOG // 04</span>
+            </div>
+            <p class="quote">&ldquo;Beyond the website, he handles our social media too. Our engagement and lead enquiries have improved noticeably since he took over the content.&rdquo;</p>
+            <div class="testimonial-author">
+              <img src="assets/avatar-4.png" alt="Skill Pinnacle" class="avatar" />
+              <div class="author-info">
+                <span class="author-name">Skill Pinnacle</span>
+                <span class="author-role">Corporate Training, Kerala &amp; UAE</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Thoughts ===== -->
+    <section class="thoughts" id="thoughts">
+      <div class="container-main">
+        <div class="thoughts-header">
+          <h2 class="section-title" style="margin-bottom: 0;">Thoughts</h2>
+          <p class="thoughts-desc">See how we shape brands with clarity and craft — explore our blog</p>
+        </div>
+        <div class="thoughts-grid">
+          
+          <!-- Post 1 -->
+          <article class="blog-card">
+            <div class="flex justify-between items-center mb-3">
+              <span class="blog-date">[Jun 2026]</span>
+              <span class="font-mono text-[0.7rem] uppercase text-secondary">DOC // 01</span>
+            </div>
+            <h3 class="blog-title">Why Kerala Healthcare Clinics Need a Website in 2026</h3>
+            <p class="blog-desc">How a clean, fast website helped Wellcare Physiotherapy rank on Google and attract patients — and what other clinics can learn.</p>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="blog-card">
+            <div class="flex justify-between items-center mb-3">
+              <span class="blog-date">[May 2026]</span>
+              <span class="font-mono text-[0.7rem] uppercase text-secondary">DOC // 02</span>
+            </div>
+            <h3 class="blog-title">20 Websites. 2 Years. Built During a Pandemic.</h3>
+            <p class="blog-desc">From my first HTML page during the COVID lockdown to delivering real estate, interior, and healthcare websites across Kerala.</p>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="blog-card">
+            <div class="flex justify-between items-center mb-3">
+              <span class="blog-date">[Apr 2026]</span>
+              <span class="font-mono text-[0.7rem] uppercase text-secondary">DOC // 03</span>
+            </div>
+            <h3 class="blog-title">Social Media vs SEO: What Actually Drives Enquiries?</h3>
+            <p class="blog-desc">After managing both for multiple Kerala businesses, here's what I've found actually brings in real clients and revenue.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact Section ===== -->
+    <section class="contact" id="contact">
+      <div class="container-main">
+        <h2 class="contact-title">Let's build something.</h2>
+        <p class="contact-subtext">Need a website, social media management, or both? Message me — I'll reply within 24 hours.</p>
+        <div class="contact-grid">
+          <div class="contact-socials">
+            <a href="#" class="social-btn" aria-label="Twitter/X">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="5" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.13C5.12 19.56 12 19.56 12 19.56s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z" />
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+              </svg>
+            </a>
+          </div>
+          <form class="contact-form">
+            <div class="flex items-center gap-1.5 border-b-2 border-white pb-3 mb-4">
+              <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+              <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+              <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              <span class="font-mono text-[0.8rem] uppercase ml-2 text-white">SEND_MESSAGE.EXE</span>
+            </div>
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <textarea name="project" rows="4" placeholder="Tell us about your project..." required></textarea>
+            </div>
+            <button type="submit" class="pill-btn full-width">Submit &rarr;</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="container-main">
+        <h2 class="footer-heading">Websites that work. Content that converts.</h2>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <span class="footer-logo">ABHI.DEV</span>
+          </div>
+          <div class="footer-col">
+            <span class="footer-label">/Quick links</span>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="services.html">Services</a>
+              <a href="works.html">Works</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <span class="footer-label">/Contact</span>
+            <a href="mailto:abhinanthpy1@gmail.com" class="footer-email">abhinanthpy1@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-watermark">ABHI</div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
