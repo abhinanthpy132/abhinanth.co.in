@@ -23,6 +23,9 @@
         }
       }
     </script>
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <!-- Custom Style -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -93,8 +96,8 @@
       <div class="absolute bottom-8 right-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
 
       <!-- Brutalist Floating Sticker GIF -->
-      <div class="absolute top-16 left-4 md:top-20 md:left-8 w-28 md:w-44 -rotate-6 transition-all duration-200 hover:rotate-0 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_0px_#00f0ff] z-10" style="box-shadow: 4px 4px 0px 0px #c5ff1a;">
-        <img src="assets/828430aa4caa664b123337b66a7e098b.gif" alt="Astro Sticker" class="w-full h-auto block" />
+      <div class="absolute top-16 left-4 md:top-20 md:left-8 w-28 md:w-44 -rotate-6 transition-all duration-200 hover:rotate-0 hover:-translate-x-0.5 hover:-translate-y-0.5 z-10">
+        <img src="assets/828430aa4caa664b123337b66a7e098b.gif" alt="Astro Sticker" class="w-full h-auto block border-none" style="border: none; filter: none;" />
       </div>
 
       <div class="hero-labels">
@@ -463,7 +466,7 @@ is still live and ranking on Google today.</p>
               </svg>
             </a>
           </div>
-          <form class="contact-form">
+          <form class="contact-form" data-endpoint="https://formspree.io/f/xnjkdeay">
             <div class="flex items-center gap-1.5 border-b-2 border-white pb-3 mb-4">
               <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
               <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
@@ -475,6 +478,9 @@ is still live and ranking on Google today.</p>
             </div>
             <div class="form-group">
               <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Your Mobile Number" required />
             </div>
             <div class="form-group">
               <textarea name="project" rows="4" placeholder="Tell us about your project..." required></textarea>
@@ -505,7 +511,7 @@ is still live and ranking on Google today.</p>
           </div>
           <div class="footer-col">
             <span class="footer-label">/Contact</span>
-            <a href="mailto:abhinanthpy1@gmail.com" class="footer-email">abhinanthpy1@gmail.com</a>
+            <a href="mailto:abhinanthpy2@gmail.com" class="footer-email">abhinanthpy2@gmail.com</a>
           </div>
         </div>
       </div>
