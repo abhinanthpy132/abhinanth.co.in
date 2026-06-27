@@ -302,10 +302,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // -------------------------------------------------------------
-      // 6.6 Page Loader and Hero Timeline
+      // 6.6 Hero Timeline & Page Entrance
       // -------------------------------------------------------------
-      const loaderEl = document.querySelector('#page-loader, .loader, .loader-wrapper');
-      const loaderTextEl = document.querySelector('.loader-text');
 
       const runHeroEntrance = () => {
         const heroTl = gsap.timeline();
@@ -366,31 +364,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
 
-      const runLoaderExit = () => {
-        const tl = gsap.timeline({
-          onComplete: () => {
-            if (loaderEl) loaderEl.style.display = 'none';
-            runHeroEntrance();
-          }
-        });
-
-        if (loaderTextEl) {
-          tl.to(loaderTextEl, { y: -20, opacity: 0, duration: 0.4, ease: "power2.in" });
-        }
-        if (loaderEl) {
-          tl.to(loaderEl, { opacity: 0, duration: 0.5, ease: "power2.inOut" }, loaderTextEl ? "-=0.2" : 0);
-        } else {
-          runHeroEntrance();
-        }
-      };
-
-      // Trigger exit after 800ms
+      // Trigger entrance immediately when page load is complete
       if (document.readyState === 'complete') {
-        setTimeout(runLoaderExit, 800);
+        runHeroEntrance();
       } else {
-        window.addEventListener('load', () => {
-          setTimeout(runLoaderExit, 800);
-        });
+        window.addEventListener('load', runHeroEntrance);
       }
 
       // -------------------------------------------------------------
