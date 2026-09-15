@@ -1,1193 +1,553 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SOW — The Complete Ecosystem for Your Vehicle</title>
-  <meta name="description" content="SOW connects vehicle health, service, emergency assistance, automotive parts, documents and ownership intelligence in one ecosystem.">
-  <meta name="keywords" content="SOW, Spare On Wheel, vehicle ecosystem, digital vehicle passport, automotive AI, emergency SOS, car maintenance, 45 minute marketplace, Kerala automotive">
-  <meta name="author" content="SOW — Spare On Wheel">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://spareonwheel.com/">
-  <meta property="og:title" content="SOW — The Complete Ecosystem for Your Vehicle">
-  <meta property="og:description" content="Everything your vehicle needs — ownership, health, service, parts, protection and assistance — connected through SOW.">
-  <meta property="og:image" content="assets/screenshots/home.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhinanth PY — Web Developer &amp; Social Media Manager</title>
+    <meta name="description" content="Abhinanth PY — Freelance web developer & social media manager from Kerala. 20+ websites built across healthcare, real estate, and interiors. Open to work." />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://abhinanth.co.in/">
+    <meta property="og:title" content="Abhinanth PY — Web Developer & Social Media Manager">
+    <meta property="og:description" content="Freelance web developer from Kerala. 20+ websites built across healthcare, real estate, and interiors.">
+    <meta property="og:image" content="https://abhinanth.co.in/assets/hero-portrait.png">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SOW — The Complete Ecosystem for Your Vehicle">
-  <meta name="twitter:description" content="An operating ecosystem for vehicle ownership. From Digital Vehicle Passport to AI health insights.">
-  <meta name="twitter:image" content="assets/screenshots/home.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Abhinanth PY — Web Developer & Social Media Manager">
+    <meta name="twitter:description" content="Freelance web developer from Kerala. 20+ websites built across healthcare, real estate, and interiors.">
+    <meta name="twitter:image" content="https://abhinanth.co.in/assets/hero-portrait.png">
 
-  <!-- Canonical & Favicons -->
-  <link rel="canonical" href="https://spareonwheel.com/">
-  <link rel="icon" type="image/svg+xml" href="assets/logo/sow-icon.svg">
-  <link rel="alternate icon" href="favicon.ico">
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#11B981">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://abhinanth.co.in/">
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/responsive.css">
-
-  <!-- Structured Data / JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://spareonwheel.com/#organization",
-        "name": "SOW — Spare On Wheel",
-        "url": "https://spareonwheel.com/",
-        "logo": "https://spareonwheel.com/assets/logo/sow-logo.svg",
-        "description": "An ecosystem for your vehicle. Connecting vehicle health, emergency SOS, genuine parts marketplace, and ownership intelligence.",
-        "foundingLocation": {
-          "@type": "Place",
-          "name": "Kerala, India"
-        }
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Abhinanth PY",
+      "url": "https://abhinanth.co.in",
+      "image": "https://abhinanth.co.in/assets/hero-portrait.png",
+      "jobTitle": "Freelance Web Developer & Social Media Manager",
+      "description": "Freelance web developer and B.Sc Nursing graduate from Kerala. 20+ websites built across healthcare, real estate, and interiors.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
       },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://spareonwheel.com/#app",
-        "name": "SOW Customer App",
-        "applicationCategory": "AutomotiveApplication",
-        "operatingSystem": "iOS, Android",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "INR"
+      "email": "abhinanthpy2@gmail.com",
+      "sameAs": [
+        "https://instagram.com/nillmention",
+        "https://linkedin.com/in/abhinanthpy"
+      ]
+    }
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#c5ff1a',
+              secondary: '#00f0ff',
+              accent: '#ff007f',
+            }
+          }
         }
       }
-    ]
-  }
-  </script>
-</head>
-<body>
+    </script>
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
 
-  <!-- =========================================================================
-       NAVIGATION BAR
-       ========================================================================= -->
-  <header class="sow-header" id="navbar">
-    <div class="site-container header-container">
-      <a href="#home" class="nav-brand" aria-label="SOW — Spare On Wheel Home">
-        <img src="assets/logo/sow-logo.svg" alt="SOW — Spare On Wheel" class="brand-logo" width="160" height="38">
-      </a>
 
-      <!-- Desktop Navigation Menu -->
-      <nav class="nav-desktop" aria-label="Primary Navigation">
-        <a href="#home" class="nav-link is-active">Home</a>
-        <a href="#ecosystem" class="nav-link">Ecosystem</a>
-        <a href="#sow-ai" class="nav-link">SOW AI</a>
-        <a href="#dvp" class="nav-link">Vehicle Passport</a>
-        <a href="#health" class="nav-link">Health</a>
-        <a href="#marketplace" class="nav-link">Marketplace</a>
-        <a href="#sos" class="nav-link">SOS</a>
-        <a href="#business" class="nav-link">For Business</a>
-        <a href="#about" class="nav-link">About</a>
-      </nav>
+    <!-- ===== Grain Overlay ===== -->
+    <div class="grain-overlay"></div>
 
-      <!-- Action Button -->
-      <div class="nav-actions">
-        <a href="#contact" class="btn btn-primary btn-sm">Get SOW</a>
-        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobile-menu">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
+    <!-- ===== Custom Cursor ===== -->
+    <div class="custom-cursor"></div>
+
+    <!-- ===== Top Banner ===== -->
+    <div class="top-banner">
+      <span>Open to Work — Web Dev &amp; Social Media</span>
+      <span>Based in Kerala 🇮🇳 | Available Worldwide</span>
+    </div>
+
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">ABHI</a>
+        <div class="nav-links">
+          <a href="index.html" style="background: #00f0ff; color: #08090c; border-color: #ffffff; transform: translate(-2px, -2px); box-shadow: 3px 3px 0px 0px #ffffff;">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="works.html">Works</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <button class="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
-    </div>
-  </header>
-
-  <!-- Mobile Drawer Menu -->
-  <div class="mobile-nav-drawer" id="mobile-menu" aria-hidden="true">
-    <nav class="mobile-nav-list" aria-label="Mobile Navigation">
-      <a href="#home" class="mobile-nav-link">Home</a>
-      <a href="#ecosystem" class="mobile-nav-link">Ecosystem</a>
-      <a href="#sow-ai" class="mobile-nav-link">SOW AI</a>
-      <a href="#dvp" class="mobile-nav-link">Digital Vehicle Passport</a>
-      <a href="#health" class="mobile-nav-link">Vehicle Health</a>
-      <a href="#marketplace" class="mobile-nav-link">Marketplace</a>
-      <a href="#sos" class="mobile-nav-link">Emergency SOS</a>
-      <a href="#community" class="mobile-nav-link">Community</a>
-      <a href="#business" class="mobile-nav-link">SOW for Business</a>
-      <a href="#about" class="mobile-nav-link">About SOW</a>
     </nav>
-    <a href="#contact" class="btn btn-primary">Get Started with SOW</a>
-  </div>
 
-  <main>
-    <!-- =======================================================================
-         1. HERO SECTION
-         ======================================================================= -->
-    <section class="hero-section" id="home">
-      <div class="site-container hero-content">
-        <div class="eyebrow reveal">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <circle cx="12" cy="12" r="6" />
-          </svg>
-          The Vehicle Operating Ecosystem
-        </div>
-        <h1 class="headline-hero reveal delay-100">
-          Your vehicle.<br>
-          One ecosystem.
+    <!-- ===== Mobile Menu ===== -->
+    <div class="mobile-menu">
+      <button class="mobile-close" aria-label="Close menu">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mobile-links">
+        <a href="index.html" class="mobile-link" style="background: #00f0ff; color: #08090c; box-shadow: 6px 6px 0px 0px #ff007f; transform: translate(-3px, -3px);">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="services.html" class="mobile-link">Services</a>
+        <a href="works.html" class="mobile-link">Works</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+      </div>
+    </div>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero">
+      <!-- Stark Drafting Crosshairs -->
+      <div class="absolute top-8 left-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
+      <div class="absolute top-8 right-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
+      <div class="absolute bottom-8 left-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
+      <div class="absolute bottom-8 right-8 text-white font-mono text-[1.2rem] select-none pointer-events-none opacity-40">+</div>
+
+      <!-- Brutalist Floating Sticker GIF -->
+      <div class="absolute top-16 left-4 md:top-20 md:left-8 w-28 md:w-44 -rotate-6 transition-all duration-200 hover:rotate-0 hover:-translate-x-0.5 hover:-translate-y-0.5 z-10">
+        <img src="assets/828430aa4caa664b123337b66a7e098b.gif" alt="Astronaut sticker" class="w-full h-auto block border-none" style="border: none; filter: none;" />
+      </div>
+
+      <div class="hero-labels">
+        <span class="hero-label-left">&copy;2026</span>
+        <span class="hero-label-right">/BUILDING SINCE COVID-2020</span>
+      </div>
+
+      <div class="hero-heading-wrapper">
+        <h1 class="hero-heading">
+          <span class="word">WEB DEV</span>
+          <span class="word">&amp; NURSE</span>
         </h1>
-        <p class="subheadline reveal delay-200">
-          Everything your vehicle needs — ownership, health, service, parts, protection and assistance — connected through SOW.
-        </p>
-        <div class="hero-ctas reveal delay-300">
-          <a href="#ecosystem" class="btn btn-primary">Explore SOW</a>
-          <a href="#showcase" class="btn btn-secondary">Discover the App</a>
+        <div class="hero-underline"></div>
+      </div>
+
+      <div class="hero-portrait">
+        <img src="assets/hero-portrait.png" alt="Abhinanth PY — freelance web developer and nurse from Kerala" class="portrait-front" />
+        <img src="assets/hero-portrait-alt.png" alt="Abhinanth PY portrait" class="portrait-back" />
+      </div>
+
+      <div class="hero-bio">
+        <div class="bio-col">
+          <span class="block font-mono text-[0.7rem] uppercase text-primary mb-3">// BIO DATA 01</span>
+          <p>I'm a freelance web developer and B.Sc Nursing graduate from Kerala. 
+I started building websites during the COVID lockdown in 2020 and have 
+since delivered 20+ projects across healthcare, real estate, interiors, 
+education, and hospitality — all while completing my nursing degree.</p>
+        </div>
+        <div class="bio-col">
+          <span class="block font-mono text-[0.7rem] uppercase text-secondary mb-3">// BIO DATA 02</span>
+          <p>Based in Kerala, India. I build fast, clean websites using HTML, CSS, 
+JavaScript, and WordPress — and manage social media for businesses 
+that want real growth. My first client, Wellcare Physiotherapy, 
+is still live and ranking on Google today.</p>
         </div>
       </div>
 
-      <!-- Hero Phone Mockup -->
-      <div class="site-container hero-mockup-wrapper">
-        <div class="hero-glow-backdrop"></div>
-        <div class="device-frame-wrapper">
-          <!-- Floating Status Badges -->
-          <div class="floating-badge hero-badge-left reveal-left delay-400">
-            <div class="badge-icon">
-              <img src="assets/icons/ic_health.svg" alt="Health" width="18" height="18">
-            </div>
-            <div>
-              <div class="badge-title">Health Score 94</div>
-              <div class="badge-subtitle">System Optimal</div>
-            </div>
-          </div>
+      <div class="hero-cta">
+        <a href="contact.html" class="pill-btn">Get Started &rarr;</a>
+      </div>
+    </section>
 
-          <div class="device-phone hover-tilt">
-            <div class="device-screen">
-              <div class="device-island">
-                <span class="island-camera"></span>
-                <span class="island-sensor"></span>
+    <!-- ===== Marquee ===== -->
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>Healthcare clinics. Real estate firms. Interior studios. Art galleries. Salons. Educational institutes. 20+ websites built across Kerala and beyond — from idea to live, clean and fast.</span>
+        <span>Healthcare clinics. Real estate firms. Interior studios. Art galleries. Salons. Educational institutes. 20+ websites built across Kerala and beyond — from idea to live, clean and fast.</span>
+        <span>Healthcare clinics. Real estate firms. Interior studios. Art galleries. Salons. Educational institutes. 20+ websites built across Kerala and beyond — from idea to live, clean and fast.</span>
+      </div>
+    </div>
+
+    <!-- ===== Services ===== -->
+    <section class="services" id="services">
+      <div class="container-main">
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+          
+          <!-- Card 1 -->
+          <div class="service-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-secondary">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
               </div>
-              <img src="assets/screenshots/home.png" alt="SOW Customer App Home Screen" class="device-img" width="310" height="650" priority="high">
+              <span>SRV // 01</span>
+            </div>
+            <h3>Website Design &amp; Build</h3>
+            <div class="tags">
+              <span class="tag">HTML / CSS / JS</span>
+              <span class="tag">WordPress</span>
+              <span class="tag">Mobile Responsive</span>
             </div>
           </div>
 
-          <div class="floating-badge hero-badge-right reveal-right delay-400">
-            <div class="badge-icon">
-              <img src="assets/icons/ic_passport.svg" alt="Passport" width="18" height="18">
+          <!-- Card 2 -->
+          <div class="service-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-secondary">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>SRV // 02</span>
             </div>
-            <div>
-              <div class="badge-title">Passport Verified</div>
-              <div class="badge-subtitle">Cryptographic Trust</div>
+            <h3>Social Media Management</h3>
+            <div class="tags">
+              <span class="tag">Instagram</span>
+              <span class="tag">Facebook</span>
+              <span class="tag">Content Strategy</span>
             </div>
           </div>
+
+          <!-- Card 3 -->
+          <div class="service-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-secondary">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>SRV // 03</span>
+            </div>
+            <h3>SEO &amp; Performance</h3>
+            <div class="tags">
+              <span class="tag">On-Page SEO</span>
+              <span class="tag">Google Analytics</span>
+              <span class="tag">Speed Optimisation</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="service-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-secondary">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>SRV // 04</span>
+            </div>
+            <h3>Niche: Healthcare &amp; Real Estate</h3>
+            <div class="tags">
+              <span class="tag">Clinic Websites</span>
+              <span class="tag">Property Listings</span>
+              <span class="tag">Lead Forms</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- =======================================================================
-         2. PRODUCT STORY SECTION (Interactive Ecosystem)
-         ======================================================================= -->
-    <section class="section story-section" id="ecosystem">
-      <div class="site-container">
-        <div class="section-header">
-          <p class="story-lead-quote reveal">SOW is not another vehicle service app.</p>
-          <h2 class="story-main-statement reveal delay-100">
-            It is an operating ecosystem for <span>vehicle ownership</span>.
-          </h2>
-          <p class="subheadline reveal delay-200">
-            Vehicle ownership today is fractured across uncoordinated garages, paper receipts, unknown parts fitment, and emergency uncertainty. SOW unifies every dimension around your vehicle.
-          </p>
+    <!-- ===== Featured Projects ===== -->
+    <section class="projects" id="projects">
+      <div class="container-main">
+        <div class="projects-header">
+          <h2 class="section-title" style="margin-bottom: 0;">Featured Projects</h2>
+          <a href="/works.html" class="view-all">View All Work &rarr;</a>
         </div>
-
-        <!-- Ecosystem Central Hub & Nodes Grid -->
-        <div class="ecosystem-nodes-grid">
-          <div class="ecosystem-card reveal delay-100">
-            <div class="ecosystem-card-icon">
-              <img src="assets/icons/ic_passport.svg" alt="Digital Vehicle Passport">
+        <div class="projects-grid">
+          
+          <!-- Project 1 -->
+          <a href="https://wellcarephysiotherapy.in/index.html" target="_blank" class="project-card" data-gradient="damas">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3 text-secondary">
+              <span>WORK // 01</span>
+              <span class="text-primary font-bold">[FILE_OK]</span>
             </div>
-            <h3 class="ecosystem-card-title">Digital Vehicle Passport</h3>
-            <p class="ecosystem-card-desc">An immutable cryptographic digital identity recording ownership, genuine service records, and verifiable trust score.</p>
-          </div>
-
-          <div class="ecosystem-card reveal delay-200">
-            <div class="ecosystem-card-icon">
-              <img src="assets/images/emblem_sow_ai_sparkle.png" alt="SOW AI">
+            <div class="project-image">
+              <video src="prg/wellcare.mp4" autoplay loop muted playsinline></video>
             </div>
-            <h3 class="ecosystem-card-title">SOW AI</h3>
-            <p class="ecosystem-card-desc">Multi-modal vehicle diagnostics assisting with part identification, engine acoustics, and symptom severity analysis.</p>
-          </div>
-
-          <div class="ecosystem-card reveal delay-300">
-            <div class="ecosystem-card-icon">
-              <img src="assets/icons/ic_health.svg" alt="Vehicle Health">
+            <div class="project-overlay">
+              <span>VISIT LIVE SITE &rarr;</span>
             </div>
-            <h3 class="ecosystem-card-title">Vehicle Health</h3>
-            <p class="ecosystem-card-desc">Real-time and estimated component scoring across engine, battery, tyres, fluids, and upcoming maintenance schedules.</p>
-          </div>
+            <h3 class="project-title">Wellcare Physiotherapy — Healthcare Clinic</h3>
+          </a>
 
-          <div class="ecosystem-card reveal delay-100">
-            <div class="ecosystem-card-icon">
-              <img src="assets/images/emblem_support_shield.png" alt="Emergency SOS">
+          <!-- Project 2 -->
+          <a href="https://rbchomeskerala.com" target="_blank" class="project-card" data-gradient="najm">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3 text-secondary">
+              <span>WORK // 02</span>
+              <span class="text-primary font-bold">[FILE_OK]</span>
             </div>
-            <h3 class="ecosystem-card-title">Emergency SOS</h3>
-            <p class="ecosystem-card-desc">Rapid on-demand roadside response, battery jumpstarts, recovery towing, and live responder GPS tracking with Service PIN.</p>
-          </div>
+            <div class="project-image">
+              <video src="prg/rbc.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="project-overlay">
+              <span>VISIT LIVE SITE &rarr;</span>
+            </div>
+            <h3 class="project-title">RBC Homes — Luxury Villas &amp; Flats, Trivandrum</h3>
+          </a>
 
-          <div class="ecosystem-card reveal delay-200">
-            <div class="ecosystem-card-icon">
-              <img src="assets/icons/ic_nav_marketplace.svg" alt="Marketplace">
+          <!-- Project 3 -->
+          <a href="https://arinterio.co.in" target="_blank" class="project-card" data-gradient="kavi">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3 text-secondary">
+              <span>WORK // 03</span>
+              <span class="text-primary font-bold">[FILE_OK]</span>
             </div>
-            <h3 class="ecosystem-card-title">Marketplace & 45-Min Quick</h3>
-            <p class="ecosystem-card-desc">Vehicle-aware parts catalog with guaranteed mechanical fitment, local fulfillment, and certified installation workshops.</p>
-          </div>
+            <div class="project-image">
+              <video src="prg/ar.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="project-overlay">
+              <span>VISIT LIVE SITE &rarr;</span>
+            </div>
+            <h3 class="project-title">AR Interiors — Premium Interior Design, Kerala</h3>
+          </a>
 
-          <div class="ecosystem-card reveal delay-300">
-            <div class="ecosystem-card-icon">
-              <img src="assets/icons/ic_vault.svg" alt="Document Vault">
+          <!-- Project 4 -->
+          <a href="https://skillpinnacle.com" target="_blank" class="project-card" data-gradient="sham">
+            <div class="flex items-center justify-between font-mono text-[0.7rem] uppercase mb-3 text-secondary">
+              <span>WORK // 04</span>
+              <span class="text-primary font-bold">[FILE_OK]</span>
             </div>
-            <h3 class="ecosystem-card-title">Document Vault & Insurance</h3>
-            <p class="ecosystem-card-desc">Encrypted cloud repository for RC, insurance policies, pollution certificates, warranty cards, and repair invoices.</p>
-          </div>
+            <div class="project-image">
+              <video src="prg/skillpinnical.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="project-overlay">
+              <span>VISIT LIVE SITE &rarr;</span>
+            </div>
+            <h3 class="project-title">Skill Pinnacle — Corporate Training Platform</h3>
+          </a>
 
-          <div class="ecosystem-card reveal delay-100">
-            <div class="ecosystem-card-icon">
-              <img src="assets/icons/ic_nav_garage.svg" alt="Garage">
-            </div>
-            <h3 class="ecosystem-card-title">Garage Management</h3>
-            <p class="ecosystem-card-desc">Multi-vehicle fleet dashboard effortlessly managing all your family cars and motorcycles in a single view.</p>
-          </div>
-
-          <div class="ecosystem-card reveal delay-200">
-            <div class="ecosystem-card-icon">
-              <img src="assets/icons/ic_nav_community.svg" alt="Community">
-            </div>
-            <h3 class="ecosystem-card-title">SOW Community</h3>
-            <p class="ecosystem-card-desc">Connect with verified vehicle owners, join curated weekend group rides, and share real-world automotive experiences.</p>
-          </div>
-
-          <div class="ecosystem-card reveal delay-300">
-            <div class="ecosystem-card-icon">
-              <img src="assets/images/emblem_installation_verified.png" alt="Workshop Network">
-            </div>
-            <h3 class="ecosystem-card-title">SOW Business Infrastructure</h3>
-            <p class="ecosystem-card-desc">Connecting verified independent workshops, mobile mechanics, and verified parts sellers into one coordinated network.</p>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- =======================================================================
-         3. DIGITAL VEHICLE PASSPORT (DVP)
-         ======================================================================= -->
-    <section class="section" id="dvp">
-      <div class="site-container">
-        <div class="feature-split">
-          <div class="feature-content">
-            <div class="eyebrow reveal">Cryptographic Provenance</div>
-            <h2 class="headline-section reveal delay-100">
-              Your vehicle has a story.<br>
-              SOW remembers it.
-            </h2>
-            <p class="subheadline reveal delay-200">
-              Every vehicle accumulates a rich history — yet today it is lost across forgotten glovebox receipts and untracked repairs. The Digital Vehicle Passport gives your vehicle a permanent, verifiable digital identity.
-            </p>
-
-            <div class="feature-list">
-              <div class="feature-item reveal delay-100">
-                <div class="feature-item-icon">
-                  <img src="assets/icons/ic_passport.svg" alt="Identity">
-                </div>
-                <div>
-                  <h4 class="feature-item-title">Verified Vehicle Identity</h4>
-                  <p class="feature-item-desc">Comprehensive VIN, chassis, manufacturing specs, and ownership timeline verified against genuine documentation.</p>
-                </div>
+    <!-- ===== Testimonials ===== -->
+    <section class="testimonials" id="testimonials">
+      <div class="container-main">
+        <h2 class="section-title">Testimonials</h2>
+        <div class="testimonials-grid">
+          
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-accent">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
               </div>
-
-              <div class="feature-item reveal delay-200">
-                <div class="feature-item-icon">
-                  <img src="assets/icons/ic_check.svg" alt="History">
-                </div>
-                <div>
-                  <h4 class="feature-item-title">Complete Service & Inspection History</h4>
-                  <p class="feature-item-desc">Every scheduled maintenance, part replacement, and AI inspection logged chronologically with authentic invoices.</p>
-                </div>
-              </div>
-
-              <div class="feature-item reveal delay-300">
-                <div class="feature-item-icon">
-                  <img src="assets/images/emblem_vehicle_verified.png" alt="Trust Score">
-                </div>
-                <div>
-                  <h4 class="feature-item-title">Vehicle Trust Score</h4>
-                  <p class="feature-item-desc">An objective, data-backed integrity score boosting resale transparency and confidence for buyers and sellers.</p>
-                </div>
+              <span>LOG // 01</span>
+            </div>
+            <p class="quote">&ldquo;Abhinanth built our physiotherapy website from scratch. It looks professional, loads fast, and our patients find us easily on Google now. Highly recommended.&rdquo;</p>
+            <div class="testimonial-author">
+              <img src="assets/avatar-1.png" alt="Wellcare Physiotherapy" class="avatar" />
+              <div class="author-info">
+                <span class="author-name">Wellcare Physiotherapy</span>
+                <span class="author-role">Healthcare Clinic, Trivandrum</span>
               </div>
             </div>
           </div>
 
-          <div class="feature-visual reveal-scale">
-            <div class="device-phone hover-tilt">
-              <div class="device-screen">
-                <div class="device-island">
-                  <span class="island-camera"></span>
-                  <span class="island-sensor"></span>
-                </div>
-                <img src="assets/screenshots/dvp.png" alt="SOW Digital Vehicle Passport Screen" class="device-img" width="310" height="650" loading="lazy">
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-accent">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>LOG // 02</span>
+            </div>
+            <p class="quote">&ldquo;He delivered a clean, premium website for our real estate brand that truly reflects the quality of our villas. Great attention to detail and very easy to work with.&rdquo;</p>
+            <div class="testimonial-author">
+              <img src="assets/avatar-2.png" alt="RBC Homes" class="avatar" />
+              <div class="author-info">
+                <span class="author-name">RBC Homes</span>
+                <span class="author-role">Real Estate, Trivandrum</span>
               </div>
             </div>
           </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-accent">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>LOG // 03</span>
+            </div>
+            <p class="quote">&ldquo;Our interior design website is exactly what we envisioned — elegant, fast, and conversion-focused. Abhinanth understood our brand from the first conversation.&rdquo;</p>
+            <div class="testimonial-author">
+              <img src="assets/avatar-3.png" alt="AR Interiors" class="avatar" />
+              <div class="author-info">
+                <span class="author-name">AR Interiors</span>
+                <span class="author-role">Interior Design Studio, Kerala</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div class="flex items-center justify-between border-b border-white border-dashed pb-3 mb-4 font-mono text-[0.7rem] uppercase text-accent">
+              <div class="flex gap-1.5">
+                <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+                <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              </div>
+              <span>LOG // 04</span>
+            </div>
+            <p class="quote">&ldquo;Beyond the website, he handles our social media too. Our engagement and lead enquiries have improved noticeably since he took over the content.&rdquo;</p>
+            <div class="testimonial-author">
+              <img src="assets/avatar-4.png" alt="Skill Pinnacle" class="avatar" />
+              <div class="author-info">
+                <span class="author-name">Skill Pinnacle</span>
+                <span class="author-role">Corporate Training, Kerala &amp; UAE</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- =======================================================================
-         4. SOW AI SECTION
-         ======================================================================= -->
-    <section class="section ai-section" id="sow-ai">
-      <div class="site-container">
-        <div class="feature-split reversed">
-          <div class="feature-content">
-            <div class="eyebrow reveal">
-              <img src="assets/images/emblem_sow_ai_sparkle.png" width="14" height="14" alt="AI">
-              Automotive Intelligence
+    <!-- ===== Thoughts ===== -->
+    <section class="thoughts" id="thoughts">
+      <div class="container-main">
+        <div class="thoughts-header">
+          <h2 class="section-title" style="margin-bottom: 0;">Thoughts</h2>
+          <p class="thoughts-desc">See how we shape brands with clarity and craft — explore our blog</p>
+        </div>
+        <div class="thoughts-grid">
+          
+          <!-- Post 1 -->
+          <article class="blog-card">
+            <div class="flex justify-between items-center mb-3">
+              <span class="blog-date">[Jun 2026]</span>
+              <span class="font-mono text-[0.7rem] uppercase text-secondary">DOC // 01</span>
             </div>
-            <h2 class="headline-section reveal delay-100">
-              An AI that understands<br>your vehicle.
-            </h2>
-            <p class="subheadline reveal delay-200">
-              From strange engine ticks to unknown warning lights and ambiguous parts, SOW AI interprets symptoms in human language and translates them into actionable insights.
-            </p>
+            <h3 class="blog-title"><a href="/blog/kerala-healthcare-clinics-website.html">Why Kerala Healthcare Clinics Need a Website in 2026</a></h3>
+            <p class="blog-desc">How a clean, fast website helped Wellcare Physiotherapy rank on Google and attract patients — and what other clinics can learn.</p>
+          </article>
 
-            <!-- Multi-Modal Inputs -->
-            <div class="ai-chips-wrapper reveal delay-200">
-              <span class="ai-chip ai-chip-emerald">💬 Text Conversation</span>
-              <span class="ai-chip ai-chip-emerald">📸 Photo Diagnosis</span>
-              <span class="ai-chip ai-chip-emerald">🎙️ Engine Acoustics</span>
-              <span class="ai-chip ai-chip-emerald">⚙️ Part Image Recognition</span>
-              <span class="ai-chip ai-chip-emerald">📋 Vehicle Context Aware</span>
+          <!-- Post 2 -->
+          <article class="blog-card">
+            <div class="flex justify-between items-center mb-3">
+              <span class="blog-date">[May 2026]</span>
+              <span class="font-mono text-[0.7rem] uppercase text-secondary">DOC // 02</span>
             </div>
+            <h3 class="blog-title"><a href="/blog/20-websites-2-years.html">20 Websites. 2 Years. Built During a Pandemic.</a></h3>
+            <p class="blog-desc">From my first HTML page during the COVID lockdown to delivering real estate, interior, and healthcare websites across Kerala.</p>
+          </article>
 
-            <div class="feature-list">
-              <div class="feature-item reveal delay-300">
-                <div class="feature-item-icon">
-                  <img src="assets/icons/ic_check.svg" alt="Analysis">
-                </div>
-                <div>
-                  <h4 class="feature-item-title">Symptom & Severity Estimation</h4>
-                  <p class="feature-item-desc">Understand whether a dashboard light requires immediate roadside pullover or can wait for your next service visit.</p>
-                </div>
-              </div>
-
-              <div class="feature-item reveal delay-400">
-                <div class="feature-item-icon">
-                  <img src="assets/icons/ic_lightning.svg" alt="Fitment">
-                </div>
-                <div>
-                  <h4 class="feature-item-title">Automotive Part Identification</h4>
-                  <p class="feature-item-desc">Photograph any worn brake pad or mechanical component; SOW AI instantly recognizes the part and locates matching OEM items.</p>
-                </div>
-              </div>
+          <!-- Project 3 -->
+          <article class="blog-card">
+            <div class="flex justify-between items-center mb-3">
+              <span class="blog-date">[Apr 2026]</span>
+              <span class="font-mono text-[0.7rem] uppercase text-secondary">DOC // 03</span>
             </div>
-
-            <div class="ai-disclaimer-card reveal delay-500">
-              <strong>AI-Assisted Automotive Insights:</strong> SOW AI provides intelligent diagnostic guidance to empower vehicle owners. Always consult certified mechanics for safety-critical repairs.
-            </div>
-          </div>
-
-          <div class="feature-visual reveal-scale">
-            <div class="device-phone hover-tilt">
-              <div class="device-screen">
-                <div class="device-island">
-                  <span class="island-camera"></span>
-                  <span class="island-sensor"></span>
-                </div>
-                <img src="assets/screenshots/sow-ai.png" alt="SOW AI Assistant Screen" class="device-img" width="310" height="650" loading="lazy">
-              </div>
-            </div>
-          </div>
+            <h3 class="blog-title"><a href="/blog/social-media-vs-seo.html">Social Media vs SEO: What Actually Drives Enquiries?</a></h3>
+            <p class="blog-desc">After managing both for multiple Kerala businesses, here's what I've found actually brings in real clients and revenue.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- =======================================================================
-         5. VEHICLE HEALTH SECTION (Interactive Gauge)
-         ======================================================================= -->
-    <section class="section section-bg-light" id="health">
-      <div class="site-container">
-        <div class="section-header">
-          <div class="eyebrow reveal">Predictive Telemetry</div>
-          <h2 class="headline-section reveal delay-100">
-            Real-time understanding of every critical component.
-          </h2>
-          <p class="subheadline reveal delay-200">
-            Continuous health telemetry synthesized into an intuitive, comprehensive score. Know the state of your brakes, engine, fluids, and battery before you turn the ignition.
-          </p>
-        </div>
-
-        <div class="health-gauge-card reveal">
-          <!-- Circular Animated Gauge -->
-          <div class="gauge-visual-container">
-            <div class="gauge-svg-box">
-              <svg viewBox="0 0 200 200">
-                <!-- Background track -->
-                <circle cx="100" cy="100" r="85" fill="none" stroke="#E5E7EB" stroke-width="14" />
-                <!-- Animated fill circle -->
-                <circle class="gauge-circle" cx="100" cy="100" r="85" fill="none" stroke="#10B981" stroke-width="14" stroke-linecap="round" />
+    <!-- ===== Contact Section ===== -->
+    <section class="contact" id="contact">
+      <div class="container-main">
+        <h2 class="contact-title">Let's build something.</h2>
+        <p class="contact-subtext">Need a website, social media management, or both? Message me — I'll reply within 24 hours.</p>
+        <div class="contact-grid">
+          <div class="contact-socials">
+            <a href="https://instagram.com/nillmention" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="5" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
               </svg>
-              <div class="gauge-center-text">
-                <span class="gauge-score-number">94</span>
-                <span class="gauge-status-label">Excellent</span>
-              </div>
+            </a>
+            <a href="https://facebook.com/YOUR_PAGE" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/abhinanthpy" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="https://wa.me/917558998519" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              </svg>
+            </a>
+          </div>
+          <form class="contact-form" data-endpoint="https://formspree.io/f/xnjkdeay">
+            <div class="flex items-center gap-1.5 border-b-2 border-white pb-3 mb-4">
+              <span class="w-2.5 h-2.5 bg-accent border border-white"></span>
+              <span class="w-2.5 h-2.5 bg-secondary border border-white"></span>
+              <span class="w-2.5 h-2.5 bg-primary border border-white"></span>
+              <span class="font-mono text-[0.8rem] uppercase ml-2 text-white">SEND_MESSAGE.EXE</span>
             </div>
-            <p style="font-size: 12px; color: var(--color-text-muted); margin-top: 12px;">Demonstration Telemetry Assessment</p>
-          </div>
-
-          <!-- Component Metrics Breakdown -->
-          <div class="health-metrics-grid">
-            <div class="health-metric-item">
-              <div class="metric-header">
-                <span class="metric-name">Engine Integrity</span>
-                <span class="metric-val">98% — Healthy</span>
-              </div>
-              <div class="metric-bar-bg"><div class="metric-bar-fill" style="width: 98%;"></div></div>
-            </div>
-
-            <div class="health-metric-item">
-              <div class="metric-header">
-                <span class="metric-name">Electrical & Battery</span>
-                <span class="metric-val">92% — Optimal</span>
-              </div>
-              <div class="metric-bar-bg"><div class="metric-bar-fill" style="width: 92%;"></div></div>
-            </div>
-
-            <div class="health-metric-item">
-              <div class="metric-header">
-                <span class="metric-name">Braking System</span>
-                <span class="metric-val">95% — Good</span>
-              </div>
-              <div class="metric-bar-bg"><div class="metric-bar-fill" style="width: 95%;"></div></div>
-            </div>
-
-            <div class="health-metric-item">
-              <div class="metric-header">
-                <span class="metric-name">Tyres & Tread</span>
-                <span class="metric-val">90% — Normal</span>
-              </div>
-              <div class="metric-bar-bg"><div class="metric-bar-fill" style="width: 90%;"></div></div>
-            </div>
-
-            <div class="health-metric-item">
-              <div class="metric-header">
-                <span class="metric-name">Fluids & Oil</span>
-                <span class="metric-val">96% — Optimal</span>
-              </div>
-              <div class="metric-bar-bg"><div class="metric-bar-fill" style="width: 96%;"></div></div>
-            </div>
-
-            <div class="health-metric-item">
-              <div class="metric-header">
-                <span class="metric-name">Maintenance Status</span>
-                <span class="metric-val">On Schedule</span>
-              </div>
-              <div class="metric-bar-bg"><div class="metric-bar-fill" style="width: 100%;"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         6. EMERGENCY SOS SECTION (Dark Obsidian Radar)
-         ======================================================================= -->
-    <section class="section sos-section" id="sos">
-      <div class="sos-glow-ambient"></div>
-      <div class="site-container">
-        <div class="feature-split">
-          <div class="feature-content">
-            <div class="eyebrow eyebrow-dark reveal">
-              <img src="assets/images/emblem_support_shield.png" width="14" height="14" alt="SOS">
-              Emergency Assistance
-            </div>
-            <h2 class="headline-section reveal delay-100">
-              Help when your vehicle<br>needs it most.
-            </h2>
-            <p class="subheadline reveal delay-200">
-              A breakdown should never mean panic. Request immediate assistance with transparent upfront pricing, live GPS technician dispatch, and verified security PINs.
-            </p>
-
-            <div class="feature-list" style="margin-top: 24px;">
-              <div class="sos-card-dark reveal delay-200">
-                <h4 class="sos-card-title">Comprehensive Breakdown Coverage</h4>
-                <p class="sos-card-desc">Flat tyre replacement, emergency battery jumpstart, fuel delivery, electrical diagnostics, and secure recovery flatbed towing.</p>
-              </div>
-
-              <div class="sos-card-dark reveal delay-300">
-                <h4 class="sos-card-title">Nearby Responder Coordination & Live ETA</h4>
-                <p class="sos-card-desc">Coordinate directly with verified nearby emergency responders. Watch real-time GPS approach with live map route tracking.</p>
-              </div>
-
-              <div class="sos-card-dark reveal delay-400">
-                <h4 class="sos-card-title">Secure Service PIN & Transparent Rates</h4>
-                <p class="sos-card-desc">Hand off your vehicle safely with authenticated two-digit Service PIN confirmation. No hidden roadside surge rates.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="feature-visual reveal-scale">
-            <!-- Radar background effect -->
-            <div class="radar-emitter-box">
-              <div class="radar-ring"></div>
-              <div class="radar-ring"></div>
-              <div class="radar-ring"></div>
-
-              <div class="device-phone hover-tilt">
-                <div class="device-screen">
-                  <div class="device-island">
-                    <span class="island-camera"></span>
-                    <span class="island-sensor"></span>
-                  </div>
-                  <img src="assets/screenshots/sos.png" alt="SOW Emergency SOS Screen" class="device-img" width="310" height="650" loading="lazy">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         7. MARKETPLACE SECTION
-         ======================================================================= -->
-    <section class="section" id="marketplace">
-      <div class="site-container">
-        <div class="section-header">
-          <div class="eyebrow reveal">Automotive Marketplace</div>
-          <h2 class="headline-section reveal delay-100">
-            Parts that fit.<br>Without the guesswork.
-          </h2>
-          <p class="subheadline reveal delay-200">
-            Never purchase the wrong part again. SOW links directly with your vehicle passport to filter millions of automotive parts for guaranteed mechanical compatibility.
-          </p>
-        </div>
-
-        <!-- Vehicle Fitment Guarantee Banner -->
-        <div class="fitment-banner reveal delay-200">
-          <div class="fitment-badge-icon">
-            <img src="assets/icons/ic_check.svg" alt="Fitment Guarantee" width="24" height="24">
-          </div>
-          <div>
-            <h4 style="font-size: 16px; font-weight: 700; color: var(--color-text-primary); margin-bottom: 2px;">
-              Smart Fitment Guarantee Engine
-            </h4>
-            <p style="font-size: 14px; color: var(--color-text-secondary); margin: 0;">
-              Parts on SOW are pre-checked against your vehicle’s exact make, model year, trim, chassis specs, and engine code. If it doesn’t fit, returns are 100% covered.
-            </p>
-          </div>
-        </div>
-
-        <!-- Marketplace Tabs (Standard vs 45-Min) -->
-        <div class="marketplace-tabs reveal delay-300">
-          <button class="mp-tab-btn is-active" data-tab="tab-standard">Standard Marketplace</button>
-          <button class="mp-tab-btn" data-tab="tab-quick">⚡ Quick — 45 Minute Marketplace</button>
-        </div>
-
-        <!-- Tab 1: Standard Marketplace -->
-        <div class="mp-tab-pane is-active" id="tab-standard">
-          <div class="feature-split">
-            <div class="feature-content">
-              <h3 style="font-size: 28px; font-weight: 800; margin-bottom: 16px;">Curated OEM & Aftermarket Catalog</h3>
-              <p class="subheadline" style="font-size: 16px; margin-bottom: 24px;">
-                Browse thousands of tested components from verified manufacturers. Inspect genuine reviews, factory warranties, and schedule direct installation at verified nearby service bays.
-              </p>
-              <div class="feature-list">
-                <div class="feature-item">
-                  <div class="feature-item-icon"><img src="assets/icons/ic_passport.svg" alt="Link"></div>
-                  <div>
-                    <h4 class="feature-item-title">Vehicle-Linked Purchase History</h4>
-                    <p class="feature-item-desc">Every part purchased automatically binds to your Digital Vehicle Passport for warranty tracking.</p>
-                  </div>
-                </div>
-                <div class="feature-item">
-                  <div class="feature-item-icon"><img src="assets/images/emblem_installation_verified.png" alt="Installation"></div>
-                  <div>
-                    <h4 class="feature-item-title">Seamless Workshop Installation</h4>
-                    <p class="feature-item-desc">Ship parts directly to a partner workshop or your doorstep with fixed-cost professional fitting.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="feature-visual">
-              <div class="device-phone hover-tilt">
-                <div class="device-screen">
-                  <div class="device-island"><span class="island-camera"></span><span class="island-sensor"></span></div>
-                  <img src="assets/screenshots/marketplace.png" alt="SOW Standard Marketplace Screen" class="device-img" width="310" height="650" loading="lazy">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 2: Quick 45-Min Marketplace -->
-        <div class="mp-tab-pane" id="tab-quick">
-          <div class="feature-split">
-            <div class="feature-content">
-              <div class="eyebrow" style="background-color: #FEF3C7; color: #D97706; border-color: rgba(217, 119, 6, 0.2);">
-                ⚡ Hyper-Local Fulfillment
-              </div>
-              <h3 style="font-size: 28px; font-weight: 800; margin-bottom: 16px;">45-Minute Rapid Consumable Delivery</h3>
-              <p class="subheadline" style="font-size: 16px; margin-bottom: 24px;">
-                Need engine oil, a replacement battery, wiper blades, or puncture repair right now? SOW Quick fulfills critical vehicle items from local dark hubs in 45 minutes flat.
-              </p>
-              <div class="feature-list">
-                <div class="feature-item">
-                  <div class="feature-item-icon"><img src="assets/icons/ic_lightning.svg" alt="Rapid"></div>
-                  <div>
-                    <h4 class="feature-item-title">Ultra-Fast Dispatch</h4>
-                    <p class="feature-item-desc">Hyper-local inventory reservations ensure products leave the nearest hub within minutes of your tap.</p>
-                  </div>
-                </div>
-                <div class="feature-item">
-                  <div class="feature-item-icon"><img src="assets/icons/ic_check.svg" alt="Verified"></div>
-                  <div>
-                    <h4 class="feature-item-title">Live Rider Tracking</h4>
-                    <p class="feature-item-desc">Watch delivery riders in real-time right to your home, roadside location, or active workshop bay.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="feature-visual">
-              <div class="device-phone hover-tilt">
-                <div class="device-screen">
-                  <div class="device-island"><span class="island-camera"></span><span class="island-sensor"></span></div>
-                  <img src="assets/screenshots/quick-marketplace.png" alt="SOW 45-Minute Quick Marketplace Screen" class="device-img" width="310" height="650" loading="lazy">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         8. GARAGE / VEHICLE MANAGEMENT
-         ======================================================================= -->
-    <section class="section section-bg-light" id="garage">
-      <div class="site-container">
-        <div class="feature-split reversed">
-          <div class="feature-content">
-            <div class="eyebrow reveal">Fleet Command</div>
-            <h2 class="headline-section reveal delay-100">
-              One garage.<br>Every vehicle.
-            </h2>
-            <p class="subheadline reveal delay-200">
-              Whether you own a luxury SUV, a family sedan, or a performance motorcycle, manage every machine in your household with custom telemetry, expense ledgers, and tailored maintenance timelines.
-            </p>
-
-            <div class="feature-list">
-              <div class="feature-item reveal delay-300">
-                <div class="feature-item-icon"><img src="assets/icons/ic_nav_garage.svg" alt="Switcher"></div>
-                <div>
-                  <h4 class="feature-item-title">Instant Vehicle Switcher</h4>
-                  <p class="feature-item-desc">Seamlessly toggle between your car and motorcycle with vehicle-specific dashboards and health tracking.</p>
-                </div>
-              </div>
-              <div class="feature-item reveal delay-400">
-                <div class="feature-item-icon"><img src="assets/icons/ic_vault.svg" alt="Expenses"></div>
-                <div>
-                  <h4 class="feature-item-title">Ownership Expense Ledger</h4>
-                  <p class="feature-item-desc">Track fuel, maintenance, insurance, parts, and toll costs over the lifetime of your vehicle.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="feature-visual reveal-scale">
-            <div class="device-phone hover-tilt">
-              <div class="device-screen">
-                <div class="device-island"><span class="island-camera"></span><span class="island-sensor"></span></div>
-                <img src="assets/screenshots/garage.png" alt="SOW Garage Management Screen" class="device-img" width="310" height="650" loading="lazy">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         9. COMMUNITY SECTION
-         ======================================================================= -->
-    <section class="section" id="community">
-      <div class="site-container">
-        <div class="feature-split">
-          <div class="feature-content">
-            <div class="eyebrow reveal">The Automotive Layer</div>
-            <h2 class="headline-section reveal delay-100">
-              SOW Community: Connect, share, and ride.
-            </h2>
-            <p class="subheadline reveal delay-200">
-              A curated space for genuine automotive enthusiasts, everyday commuters, and riders. Share build logs, discuss modifications, discover road trip routes, and join verified group rides.
-            </p>
-            <div class="feature-list">
-              <div class="feature-item reveal delay-300">
-                <div class="feature-item-icon"><img src="assets/icons/ic_nav_community.svg" alt="Feed"></div>
-                <div>
-                  <h4 class="feature-item-title">Verified Owner Feed</h4>
-                  <p class="feature-item-desc">Authentic discussions and real-world advice from fellow owners who drive the exact vehicle you own.</p>
-                </div>
-              </div>
-              <div class="feature-item reveal delay-400">
-                <div class="feature-item-icon"><img src="assets/icons/ic_check.svg" alt="Rides"></div>
-                <div>
-                  <h4 class="feature-item-title">Organized Group Rides & Route Builder</h4>
-                  <p class="feature-item-desc">Discover curated weekend touring circuits, join verified convoys, and ride with peace of mind knowing SOW SOS has your back.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="feature-visual reveal-scale">
-            <div class="device-phone hover-tilt">
-              <div class="device-screen">
-                <div class="device-island"><span class="island-camera"></span><span class="island-sensor"></span></div>
-                <img src="assets/screenshots/community.png" alt="SOW Community Screen" class="device-img" width="310" height="650" loading="lazy">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         10. DOCUMENTS & INSURANCE SECTION
-         ======================================================================= -->
-    <section class="section section-bg-light" id="documents">
-      <div class="site-container">
-        <div class="feature-split reversed">
-          <div class="feature-content">
-            <div class="eyebrow reveal">Document Vault</div>
-            <h2 class="headline-section reveal delay-100">
-              Everything important.<br>Always within reach.
-            </h2>
-            <p class="subheadline reveal delay-200">
-              Never scramble for an expired insurance policy or misplaced registration card. Securely store and organize your RC, insurance paperwork, PUC certificates, and service invoices in an encrypted personal vault.
-            </p>
-            <div class="feature-list">
-              <div class="feature-item reveal delay-300">
-                <div class="feature-item-icon"><img src="assets/icons/ic_vault.svg" alt="Vault"></div>
-                <div>
-                  <h4 class="feature-item-title">Encrypted Document Organization</h4>
-                  <p class="feature-item-desc">Organize RC, driving licenses, and warranty slips with end-to-end cloud encryption.</p>
-                </div>
-              </div>
-              <div class="feature-item reveal delay-400">
-                <div class="feature-item-icon"><img src="assets/icons/ic_check.svg" alt="Reminders"></div>
-                <div>
-                  <h4 class="feature-item-title">Smart Expiration & Renewal Alerts</h4>
-                  <p class="feature-item-desc">Get proactive notifications before insurance policies, fitness certificates, or pollution checks lapse.</p>
-                </div>
-              </div>
-            </div>
-            <p style="font-size: 11px; color: var(--color-text-muted); margin-top: 16px;">
-              * Note: SOW is an encrypted private digital management vault and does not claim to replace sovereign governmental databases.
-            </p>
-          </div>
-
-          <div class="feature-visual reveal-scale">
-            <div class="device-phone hover-tilt">
-              <div class="device-screen">
-                <div class="device-island"><span class="island-camera"></span><span class="island-sensor"></span></div>
-                <img src="assets/screenshots/documents.png" alt="SOW Document Vault Screen" class="device-img" width="310" height="650" loading="lazy">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         11. COMPLETE ECOSYSTEM ARCHITECTURE
-         ======================================================================= -->
-    <section class="section">
-      <div class="site-container">
-        <div class="section-header">
-          <div class="eyebrow reveal">Ecosystem Infrastructure</div>
-          <h2 class="headline-section reveal delay-100">
-            Unifying the fragmented automotive economy.
-          </h2>
-          <p class="subheadline reveal delay-200">
-            SOW is creating the connected technology infrastructure uniting drivers, workshops, mobile mechanics, parts suppliers, and emergency responders into one seamless network.
-          </p>
-        </div>
-
-        <div class="architecture-grid reveal delay-200">
-          <div class="arch-node-card">
-            <div class="arch-node-icon"><img src="assets/icons/ic_nav_home.svg" alt="Customer App"></div>
-            <h4 class="arch-node-title">SOW Customer App</h4>
-            <p class="arch-node-desc">The personal command center for vehicle owners, digital passports, health diagnostics, and on-demand care.</p>
-          </div>
-
-          <div class="arch-node-card">
-            <div class="arch-node-icon"><img src="assets/images/emblem_installation_verified.png" alt="Workshops"></div>
-            <h4 class="arch-node-title">Verified Workshop Network</h4>
-            <p class="arch-node-desc">Independent garage partners powered by job tracking, transparent billing, and instant parts fulfillment.</p>
-          </div>
-
-          <div class="arch-node-card">
-            <div class="arch-node-icon"><img src="assets/icons/ic_lightning.svg" alt="Mobile"></div>
-            <h4 class="arch-node-title">Mobile Service Vans</h4>
-            <p class="arch-node-desc">Doorstep vehicle maintenance, quick oil changes, and roadside recovery responders with live telematics.</p>
-          </div>
-
-          <div class="arch-node-card">
-            <div class="arch-node-icon"><img src="assets/images/emblem_package_verified.png" alt="Vendors"></div>
-            <h4 class="arch-node-title">Parts Hubs & Vendors</h4>
-            <p class="arch-node-desc">Local auto-parts distributors synchronized with real-time stock reservations and 45-minute dispatch.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         12. SOW FOR BUSINESS
-         ======================================================================= -->
-    <section class="section section-bg-surface" id="business">
-      <div class="site-container">
-        <div class="feature-split">
-          <div class="feature-content">
-            <div class="eyebrow reveal">Enterprise & Workshop Platform</div>
-            <h2 class="headline-section reveal delay-100">
-              Powering modern automotive service businesses.
-            </h2>
-            <p class="subheadline reveal delay-200">
-              Transform your garage, mobile workshop, or parts dealership with SOW for Business. Streamline digital bookings, customer job sheets, inventory management, and emergency response requests.
-            </p>
-
-            <div class="feature-list">
-              <div class="feature-item reveal delay-200">
-                <div class="feature-item-icon"><img src="assets/icons/ic_check.svg" alt="Bookings"></div>
-                <div>
-                  <h4 class="feature-item-title">Automated Bay Bookings & Job Cards</h4>
-                  <p class="feature-item-desc">Accept pre-diagnosed service requests directly from SOW vehicle owners with verified parts requirements.</p>
-                </div>
-              </div>
-              <div class="feature-item reveal delay-300">
-                <div class="feature-item-icon"><img src="assets/icons/ic_lightning.svg" alt="Marketplace"></div>
-                <div>
-                  <h4 class="feature-item-title">Direct Marketplace Supplier Access</h4>
-                  <p class="feature-item-desc">Source wholesale OEM parts with guaranteed compatibility and fast local hub delivery.</p>
-                </div>
-              </div>
-            </div>
-
-            <div style="margin-top: 32px;" class="reveal delay-400">
-              <a href="#contact" class="btn btn-primary">Partner with SOW</a>
-            </div>
-          </div>
-
-          <div class="feature-visual reveal-scale">
-            <div class="device-phone hover-tilt">
-              <div class="device-screen">
-                <div class="device-island"><span class="island-camera"></span><span class="island-sensor"></span></div>
-                <img src="assets/screenshots/workshop.png" alt="SOW for Business Workshop Profile" class="device-img" width="310" height="650" loading="lazy">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         13. APP SCREENSHOT SHOWCASE SECTION
-         ======================================================================= -->
-    <section class="section showcase-section" id="showcase">
-      <div class="site-container">
-        <div class="section-header">
-          <div class="eyebrow reveal">Product Gallery</div>
-          <h2 class="headline-section reveal delay-100">
-            Engineered with extreme precision.
-          </h2>
-          <p class="subheadline reveal delay-200">
-            Explore the complete SOW Customer App interface across every module.
-          </p>
-        </div>
-
-        <!-- Pill Navigation Bar -->
-        <div class="gallery-nav-pills reveal delay-200">
-          <!-- Populated dynamically via js/gallery.js -->
-        </div>
-
-        <!-- Showcase Center Stage -->
-        <div class="showcase-stage-wrapper reveal-scale delay-300" style="text-align: center;">
-          <div class="device-frame-wrapper">
-            <div class="device-phone hover-tilt" style="margin: 0 auto;">
-              <div class="device-screen">
-                <div class="device-island"><span class="island-camera"></span><span class="island-sensor"></span></div>
-                <img src="assets/screenshots/home.png" alt="SOW Showcase Screen" class="device-img showcase-device-img" width="310" height="650">
-              </div>
-            </div>
-          </div>
-
-          <!-- Dynamic Caption -->
-          <div style="max-width: 580px; margin: 32px auto 0 auto;">
-            <span class="eyebrow showcase-info-subtitle" style="margin-bottom: 8px;">Home Dashboard</span>
-            <h3 class="showcase-info-title" style="font-size: 24px; font-weight: 800; margin-bottom: 8px;">Command Center</h3>
-            <p class="showcase-info-desc" style="font-size: 15px; color: var(--color-text-secondary); line-height: 1.5;">
-              Unified view of vehicle status, quick actions, real-time health indicator, and ecosystem shortcuts.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         14. HOW SOW WORKS SECTION
-         ======================================================================= -->
-    <section class="section">
-      <div class="site-container">
-        <div class="section-header">
-          <div class="eyebrow reveal">Simplicity First</div>
-          <h2 class="headline-section reveal delay-100">
-            How SOW works in three steps.
-          </h2>
-          <p class="subheadline reveal delay-200">
-            Getting started takes less than two minutes.
-          </p>
-        </div>
-
-        <div class="steps-grid reveal delay-200">
-          <div class="step-card">
-            <div class="step-number">1</div>
-            <h3 class="step-title">Add your vehicle</h3>
-            <p class="step-desc">
-              Input your registration or chassis details. SOW automatically detects your manufacturer specifications, model year, and engine specifications.
-            </p>
-          </div>
-
-          <div class="step-card">
-            <div class="step-number">2</div>
-            <h3 class="step-title">Build its digital identity</h3>
-            <p class="step-desc">
-              Upload your documents to the encrypted vault. SOW establishes your Digital Vehicle Passport and calculates your baseline vehicle health score.
-            </p>
-          </div>
-
-          <div class="step-card">
-            <div class="step-number">3</div>
-            <h3 class="step-title">Access the ecosystem</h3>
-            <p class="step-desc">
-              Enjoy complete peace of mind with SOW AI diagnostic insights, guaranteed parts fitment, rapid 45-minute delivery, and instant roadside SOS assistance.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         15. BRAND TRUST SECTION
-         ======================================================================= -->
-    <section class="section section-bg-light">
-      <div class="site-container">
-        <div class="section-header">
-          <div class="eyebrow reveal">Trust & Security</div>
-          <h2 class="headline-section reveal delay-100">
-            Built for the complete ownership journey.
-          </h2>
-          <p class="subheadline reveal delay-200">
-            Trust is earned through rigorous privacy principles, authentic product craftsmanship, and verifiable records.
-          </p>
-        </div>
-
-        <div class="trust-grid reveal delay-200">
-          <div class="trust-card">
-            <img src="assets/images/emblem_shield_verified.png" alt="Privacy First" class="trust-card-icon">
-            <h4 class="trust-card-title">Your Vehicle Data Belongs to You</h4>
-            <p class="trust-card-desc">We never sell your telemetry, mileage, or service logs to advertising brokers. Your records are stored in your encrypted vault.</p>
-          </div>
-
-          <div class="trust-card">
-            <img src="assets/images/emblem_warranty_verified.png" alt="Verified Network" class="trust-card-icon">
-            <h4 class="trust-card-title">Rigorous Partner Standards</h4>
-            <p class="trust-card-desc">Workshops, mobile technicians, and parts vendors undergo strict physical onboarding and quality evaluations before joining the SOW network.</p>
-          </div>
-
-          <div class="trust-card">
-            <img src="assets/images/emblem_refund_complete.png" alt="Transparent Billing" class="trust-card-icon">
-            <h4 class="trust-card-title">Clear, Transparent Pricing</h4>
-            <p class="trust-card-desc">From emergency roadside recovery to spare parts, see itemized upfront pricing without hidden surprise charges.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         16. ABOUT SOW SECTION
-         ======================================================================= -->
-    <section class="section about-section" id="about">
-      <div class="site-container">
-        <div class="about-box reveal">
-          <div class="eyebrow">Our Mission</div>
-          <h2 class="about-headline">
-            Why we built SOW.
-          </h2>
-          <p class="about-body">
-            Vehicle ownership is one of the largest financial commitments people make — yet the ownership experience has remained fragmented across disconnected local workshops, paper service books, confusing spare parts catalogues, and uncertain roadside emergencies.
-          </p>
-          <p class="about-body">
-            SOW — Spare On Wheel was founded to eliminate this friction. We are building the unified operating ecosystem for personal mobility: connecting vehicle intelligence, health telemetry, genuine parts, and trusted emergency support into a single harmonious experience.
-          </p>
-          <div class="about-meta">
-            <div>
-              <div class="meta-item-label">Mission</div>
-              <div class="meta-item-val">Make vehicle ownership simpler, safer and more intelligent.</div>
-            </div>
-            <div>
-              <div class="meta-item-label">Origin</div>
-              <div class="meta-item-val">Kerala, India</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================================
-         17. CONTACT SECTION
-         ======================================================================= -->
-    <section class="section contact-section" id="contact">
-      <div class="site-container">
-        <div class="section-header">
-          <div class="eyebrow reveal">Get in Touch</div>
-          <h2 class="headline-section reveal delay-100">
-            Connect with the SOW team.
-          </h2>
-          <p class="subheadline reveal delay-200">
-            Whether you are a customer, automotive workshop, technology partner, or investor, we would love to hear from you.
-          </p>
-        </div>
-
-        <div class="contact-card reveal delay-300">
-          <form id="sow-contact-form" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="contact-name" class="form-label">Full Name *</label>
-                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Rahul Nair" required>
-                <span class="form-error-msg">Please provide your full name.</span>
-              </div>
-              <div class="form-group">
-                <label for="contact-email" class="form-label">Email Address *</label>
-                <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. rahul@example.com" required>
-                <span class="form-error-msg">Please provide a valid email address.</span>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="contact-phone" class="form-label">Phone Number</label>
-                <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="+91 98765 43210">
-              </div>
-              <div class="form-group">
-                <label for="contact-company" class="form-label">Company / Organization</label>
-                <input type="text" id="contact-company" name="company" class="form-input" placeholder="Workshop, Brand, or Fleet name">
-              </div>
-            </div>
-
             <div class="form-group">
-              <label for="contact-message" class="form-label">Message *</label>
-              <textarea id="contact-message" name="message" rows="4" class="form-textarea" placeholder="Tell us how we can collaborate..." required></textarea>
-              <span class="form-error-msg">Please write a message of at least 10 characters.</span>
+              <input type="text" name="name" placeholder="Your Name" required />
             </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px;">Send Message to SOW</button>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Your Mobile Number" required />
+            </div>
+            <div class="form-group">
+              <textarea name="project" rows="4" placeholder="Tell us about your project..." required></textarea>
+            </div>
+            <button type="submit" class="pill-btn full-width">Submit &rarr;</button>
           </form>
         </div>
       </div>
     </section>
-  </main>
 
-  <!-- =========================================================================
-       FOOTER
-       ========================================================================= -->
-  <footer class="sow-footer">
-    <div class="site-container">
-      <div class="footer-top">
-        <div class="footer-brand-col">
-          <img src="assets/logo/sow-logo-white.svg" alt="SOW — Spare On Wheel" class="footer-logo" width="160" height="38">
-          <p class="footer-tagline">
-            An ecosystem for your vehicle.<br>
-            Ownership, health, service, parts, protection and assistance connected through SOW.
-          </p>
-          <div style="font-size: 12px; color: #64748B;">
-            HQ: Kerala, India
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <div class="container-main">
+        <h2 class="footer-heading">Websites that work. Content that converts.</h2>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <span class="footer-logo">ABHI.DEV</span>
+          </div>
+          <div class="footer-col">
+            <span class="footer-label">/Quick links</span>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="services.html">Services</a>
+              <a href="works.html">Works</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <span class="footer-label">/Contact</span>
+            <a href="mailto:abhinanthpy2@gmail.com" class="footer-email">abhinanthpy2@gmail.com</a>
           </div>
         </div>
-
-        <div>
-          <h4 class="footer-heading">Product</h4>
-          <ul class="footer-links">
-            <li><a href="#dvp" class="footer-link">Vehicle Passport</a></li>
-            <li><a href="#sow-ai" class="footer-link">SOW AI</a></li>
-            <li><a href="#health" class="footer-link">Vehicle Health</a></li>
-            <li><a href="#marketplace" class="footer-link">Marketplace</a></li>
-            <li><a href="#marketplace" class="footer-link">45-Min Quick Parts</a></li>
-            <li><a href="#sos" class="footer-link">Emergency SOS</a></li>
-            <li><a href="#community" class="footer-link">Community</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-heading">Company</h4>
-          <ul class="footer-links">
-            <li><a href="#about" class="footer-link">About SOW</a></li>
-            <li><a href="#contact" class="footer-link">Contact</a></li>
-            <li><a href="#about" class="footer-link">Careers</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-heading">Business</h4>
-          <ul class="footer-links">
-            <li><a href="#business" class="footer-link">SOW for Business</a></li>
-            <li><a href="#business" class="footer-link">Workshop Network</a></li>
-            <li><a href="#contact" class="footer-link">Partner With SOW</a></li>
-            <li><a href="#contact" class="footer-link">Vendor Registration</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-heading">Legal</h4>
-          <ul class="footer-links">
-            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
-            <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
-          </ul>
-        </div>
       </div>
+      <div class="footer-watermark">ABHI</div>
+    </footer>
 
-      <div class="footer-bottom">
-        <div>
-          © <span id="current-year">2026</span> SOW — Spare On Wheel. All rights reserved.
-        </div>
-        <div class="footer-social-links">
-          <a href="#" class="social-link" aria-label="SOW on Instagram">Instagram</a>
-          <a href="#" class="social-link" aria-label="SOW on LinkedIn">LinkedIn</a>
-          <a href="#" class="social-link" aria-label="SOW on YouTube">YouTube</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Modal Feedback -->
-  <div class="modal-overlay" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="modal-box">
-      <h3 class="modal-title" id="modal-title" style="font-size: 22px; font-weight: 800; margin-bottom: 12px; color: var(--color-text-primary);">
-        Notice
-      </h3>
-      <p class="modal-description" style="font-size: 15px; color: var(--color-text-secondary); line-height: 1.5; margin-bottom: 24px;">
-        Contact integration coming soon.
-      </p>
-      <button type="button" class="btn btn-primary" id="modal-close-btn" style="min-width: 140px;">Close</button>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script type="module" src="js/main.js"></script>
-</body>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
 </html>
