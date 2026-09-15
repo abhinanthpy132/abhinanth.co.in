@@ -1,0 +1,22 @@
+{
+  "name": "SOW — Spare On Wheel",
+  "short_name": "SOW",
+  "description": "An ecosystem for your vehicle. Ownership, health, service, parts, protection and assistance connected through SOW.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#11B981",
+  "icons": [
+    {
+      "src": "assets/logo/sow-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ]
+}
