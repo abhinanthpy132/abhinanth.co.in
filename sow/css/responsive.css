@@ -1,0 +1,255 @@
+/* ==========================================================================
+   SOW — Spare On Wheel | Responsive Adaptation Layer
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Desktop Large & Laptops (<= 1200px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .feature-split {
+    gap: var(--space-2xl);
+  }
+
+  .architecture-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-top {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Tablets (<= 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .feature-split {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-3xl);
+  }
+
+  .feature-split.reversed {
+    direction: ltr;
+  }
+
+  .feature-content {
+    align-items: center;
+  }
+
+  .feature-item {
+    text-align: left;
+  }
+
+  .ecosystem-nodes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .health-gauge-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .health-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-badge-left {
+    left: -20px;
+    top: 15%;
+  }
+
+  .hero-badge-right {
+    right: -20px;
+    bottom: 15%;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .footer-brand-col {
+    grid-column: span 2;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Landscape & Large Phones (<= 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .headline-hero {
+    font-size: 2.75rem;
+  }
+
+  .headline-section {
+    font-size: 2rem;
+  }
+
+  .subheadline {
+    font-size: 1.05rem;
+  }
+
+  .device-phone {
+    width: 280px;
+    height: 590px;
+    border-radius: 42px;
+    padding: 8px;
+  }
+
+  .device-screen {
+    border-radius: 34px;
+  }
+
+  .hero-mockup-wrapper {
+    overflow: hidden;
+  }
+
+  .hero-glow-backdrop {
+    width: 320px;
+    height: 320px;
+  }
+
+  .floating-badge {
+    position: relative;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin: 8px auto;
+    max-width: 260px;
+    transform: none !important;
+  }
+
+  .hero-badge-container-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    margin-top: var(--space-lg);
+  }
+
+  .ecosystem-nodes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: var(--space-xl);
+  }
+
+  .about-box {
+    padding: var(--space-xl);
+  }
+
+  .fitment-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand-col {
+    grid-column: span 1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-sm);
+  }
+
+  .footer-social-links {
+    justify-content: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Small Phones (<= 430px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 430px) {
+  .site-container,
+  .site-container-wide {
+    padding: 0 var(--space-md);
+  }
+
+  .headline-hero {
+    font-size: 2.25rem;
+  }
+
+  .headline-section {
+    font-size: 1.75rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .device-phone {
+    width: 260px;
+    height: 540px;
+    border-radius: 38px;
+    padding: 7px;
+  }
+
+  .device-screen {
+    border-radius: 30px;
+  }
+
+  .gauge-svg-box {
+    width: 160px;
+    height: 160px;
+  }
+
+  .gauge-score-number {
+    font-size: 2.75rem;
+  }
+
+  .gallery-pill {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Ultra-Compact Devices (<= 360px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 360px) {
+  .headline-hero {
+    font-size: 1.95rem;
+  }
+
+  .device-phone {
+    width: 240px;
+    height: 500px;
+  }
+}

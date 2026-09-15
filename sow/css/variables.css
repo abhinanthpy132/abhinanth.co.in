@@ -1,0 +1,119 @@
+/* ==========================================================================
+   SOW — Spare On Wheel | Design System Tokens & Variables
+   ========================================================================== */
+
+:root {
+  /* Brand Palette (SOW Emerald) */
+  --color-emerald: #11B981;
+  --color-emerald-light: #ECFDF5;
+  --color-emerald-medium: #34D399;
+  --color-emerald-dark: #047857;
+  --color-emerald-deep: #064E3B;
+  --color-emerald-glow: rgba(17, 185, 129, 0.22);
+  --color-emerald-glow-subtle: rgba(17, 185, 129, 0.08);
+
+  /* Neutrals & Surfaces */
+  --color-bg-white: #FFFFFF;
+  --color-bg-page: #F7F8F8;
+  --color-bg-surface: #F3F5F5;
+  --color-bg-elevated: #FFFFFF;
+  --color-bg-subtle: #FAFAF9;
+  --color-bg-dark: #0B0F14;
+  --color-bg-dark-surface: #131A22;
+  --color-bg-dark-elevated: #1B2430;
+
+  /* Typography Colors */
+  --color-text-primary: #111111;
+  --color-text-secondary: #687177;
+  --color-text-muted: #8E98A0;
+  --color-text-light: #A3ADB5;
+  --color-text-inverse: #FFFFFF;
+  --color-text-inverse-secondary: #94A3B8;
+
+  /* Borders & Dividers */
+  --color-border: rgba(17, 17, 17, 0.08);
+  --color-border-subtle: rgba(17, 17, 17, 0.04);
+  --color-border-hover: rgba(17, 185, 129, 0.4);
+  --color-border-dark: rgba(255, 255, 255, 0.1);
+  --color-border-dark-subtle: rgba(255, 255, 255, 0.05);
+
+  /* Status Colors */
+  --color-status-success: #10B981;
+  --color-status-warning: #F59E0B;
+  --color-status-danger: #EF4444;
+  --color-status-info: #3B82F6;
+
+  /* Typography Stack */
+  --font-family-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro", "Inter", "Helvetica Neue", sans-serif;
+  --font-family-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro", "Inter", -apple-system, sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Type Scale */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-md: 1.125rem;   /* 18px */
+  --font-size-lg: 1.25rem;    /* 20px */
+  --font-size-xl: 1.5rem;     /* 24px */
+  --font-size-2xl: 2rem;      /* 32px */
+  --font-size-3xl: 2.5rem;    /* 40px */
+  --font-size-4xl: 3.25rem;   /* 52px */
+  --font-size-5xl: 4.25rem;   /* 68px */
+  --font-size-hero: clamp(2.75rem, 6.5vw, 5.5rem);
+
+  /* Elevation Shadows (Soft Apple-grade) */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.03);
+  --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.04);
+  --shadow-device: 0 35px 80px -15px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  --shadow-glow: 0 0 48px -10px var(--color-emerald-glow);
+
+  /* Border Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-2xl: 44px;
+  --radius-full: 9999px;
+
+  /* Spacing Scale */
+  --space-2xs: 0.25rem;  /* 4px */
+  --space-xs: 0.5rem;    /* 8px */
+  --space-sm: 0.75rem;   /* 12px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4.5rem;   /* 72px */
+  --space-4xl: 6rem;     /* 96px */
+  --space-5xl: 8rem;     /* 128px */
+
+  /* Layout Max Widths */
+  --max-width-site: 1240px;
+  --max-width-wide: 1400px;
+  --max-width-content: 800px;
+  --max-width-narrow: 640px;
+
+  /* Glassmorphism & Translucency */
+  --glass-bg: rgba(255, 255, 255, 0.76);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-blur: blur(20px);
+  --glass-blur-heavy: blur(32px);
+  --glass-dark-bg: rgba(19, 26, 34, 0.75);
+
+  /* Motion Timing (Apple Easing) */
+  --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-fast: 200ms var(--ease-apple);
+  --transition-normal: 380ms var(--ease-apple);
+  --transition-slow: 600ms var(--ease-apple);
+  --transition-fluid: 800ms var(--ease-apple);
+
+  /* Device Mockup Geometry */
+  --device-width-desktop: 320px;
+  --device-height-desktop: 680px;
+  --device-radius: 46px;
+  --device-bezel: 10px;
+}
