@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://abhinanth.co.in/scale/sitemap.xml
